@@ -8210,7 +8210,7 @@ h1, h2, h3, h4, h5,
     padding-left: 20px;
     padding-right: 20px;
     color: #000000;
-    font-weight: 400;
+    font-weight: 600;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link span {
       position: relative;
@@ -8395,7 +8395,7 @@ h1, h2, h3, h4, h5,
 
 .hero-wrap {
   width: 100%;
-  height: 80vh;
+  /*height: 80vh;*/
   position: inherit;
   background-size: cover;
   background-repeat: no-repeat; }
@@ -8405,19 +8405,17 @@ h1, h2, h3, h4, h5,
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #EEE;}
+    background-color: #ffe36f;}
   .hero-wrap .text {
-    width: 100%; 
-    background: #fff;
-    padding: 30px;
-    border-radius: 24px; }
+    width: 100%;  }
   .hero-wrap > div {
-    height: 80vh; }
+    /*height: 80vh;*/ }
   .hero-wrap .page-title-block {
-    padding-top: 30vh;}
+    padding-top: 20vh;
+    padding-bottom: 5vh;}
   @media (max-width: 767.98px) {
     .hero-wrap .page-title-block{
-      padding-top: 30vh;} 
+      padding-top: 20vh;} 
     .hero-wrap {
       height: 60vh;} }
 
@@ -8611,13 +8609,13 @@ h1, h2, h3, h4, h5,
         background: #3e64ff !important;
         color: #fff !important; }
   .btn.btn-secondary {
-    background: #a0f669 !important;
-    border: 1px solid #a0f669 !important;
-    color: #fff !important; }
+    background: transparent !important;
+    border: 1px solid #3e64ff !important;
+    color: #3e64ff !important; }
     .btn.btn-secondary:hover {
-      border: 1px solid #a0f669 !important;
-      background: transparent !important;
-      color: #a0f669 !important; }
+      border: 1px solid #3e64ff !important;
+      background: #3e64ff !important;
+      color: #FFF !important; }
     .btn.btn-secondary.btn-outline-primary {
       border: 1px solid #a0f669;
       background: transparent;
@@ -9495,14 +9493,14 @@ textarea.form-control {
 .tagcloud a {
   text-transform: uppercase;
   display: inline-block;
-  padding: 0 8px;
+  padding: 2px 12px;
   margin-bottom: 7px;
   margin-right: 4px;
   border-radius: 50px;
-  color: #3e64ff;
+  color: #fff;
   font-weight: bolder;
-  background-color: #eee;
-  font-size: 14px; }
+  background-color: #333;
+  font-size: 18px; }
   .tagcloud a:hover {
     cursor: default; }
 
@@ -9704,6 +9702,10 @@ textarea.form-control {
 
 
 
+.article-section {
+  background-color: #f7f7f7;
+}
+
 
 .article-section h2 {
   color: #3e64ff;
@@ -9728,3 +9730,21 @@ textarea.form-control {
     background-color: #e4e4e4;
     font-size: 16px;
 }
+
+
+.resume-wrap .link-group > .btn {
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
