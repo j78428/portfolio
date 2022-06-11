@@ -9738,6 +9738,32 @@ textarea.form-control {
   margin-bottom: 8px;
 }
 
+/*
+
+.resume-wrap span.highlight-color:after {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 3px solid #fece00;
+}
+*/
+
+.resume-wrap span.highlight-color {
+  color: #333;
+  font-weight: bold;
+/*  border-bottom: 3px solid #fece00;*/
+position: relative;
+}
+
+.resume-wrap span.highlight-color:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffe36f;
+  height: 10px;
+  z-index: -1;
+}
 
 
 
