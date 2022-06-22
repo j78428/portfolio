@@ -9766,9 +9766,32 @@ position: relative;
 }
 
 
+.feedback_card {
+  background-color: #e0ebfa;
+  padding: 20px;
+  border-radius: 40px;
+}
 
+.feedback_card .profile_image {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .feedback_card .profile_image {
+    margin-bottom: 20px;
+  }
+}
 
-
+.feedback_card .role {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+@media (max-width: 767px) {
+  .feedback_card .role {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 
 
