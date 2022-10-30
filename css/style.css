@@ -8720,8 +8720,6 @@ h1, h2, h3, h4, h5,
 .page {
   width: 100%;
   margin-bottom: 7em; }
-  .page.four {
-    margin-bottom: 0; }
   .page .heading {
     font-weight: 800;
     font-size: 30px;
@@ -9997,4 +9995,11 @@ position: relative;
   .radius-style {
     border-radius: 0 80px;
   }
+}
+
+
+
+.section-heading {
+    font-weight: 800;
+    color: #055295;
 }
