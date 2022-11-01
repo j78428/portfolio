@@ -9880,9 +9880,9 @@ position: relative;
 
 .design_card {
   text-align: center;
-  background-color: #333;
+  background-color: #e7eff6;
   border-radius: 40px;
-  color: #fff;
+  color: #333;
   padding: 20px 32px;
   line-height: 48px;
   font-size: 20px;
@@ -9893,6 +9893,7 @@ position: relative;
   font-weight: bolder;
   font-style: italic;
   float: left;
+  color: #055295;
 }
 
 
