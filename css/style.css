@@ -395,7 +395,9 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 25px -15px rgba(0, 0, 0, 0.3); }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -9880,7 +9882,7 @@ position: relative;
 
 .design_card {
   text-align: center;
-  background-color: #e7eff6;
+  background-color: #FAEBE0;
   border-radius: 40px;
   color: #333;
   padding: 20px 32px;
