@@ -8661,9 +8661,6 @@ h1, h2, h3, h4, h5,
     z-index: 1;
     border-radius: 160px 0 120px 0; 
 }
-  .ftco-about .img-about .img:hover {
-    background-image: url(../images/profile2.jpg)!important;
-}
 
 
 .ftco-about ul.about-info {
