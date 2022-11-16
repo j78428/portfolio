@@ -8652,13 +8652,19 @@ h1, h2, h3, h4, h5,
   width: 100%;
   height: 550px;
   z-index: 0;
-  position: relative; }
+  position: relative; 
+}
   .ftco-about .img-about .img {
     display: block;
     width: 100%;
     position: relative;
     z-index: 1;
-    border-radius: 160px 0 120px 0; }
+    border-radius: 160px 0 120px 0; 
+}
+  .ftco-about .img-about .img:hover {
+    background-image: url(../images/profile2.jpg)!important;
+}
+
 
 .ftco-about ul.about-info {
   display: inline-block;
@@ -10005,3 +10011,12 @@ span.highlight-color:after {
     font-weight: 800;
     color: #055295;
 }
+
+
+
+
+
+
+
+
+
