@@ -9791,23 +9791,14 @@ section.bg-2 {
   margin-bottom: 8px;
 }
 
-/*
 
-.resume-wrap span.highlight-color:after {
+span.highlight-color {
   color: #333;
   font-weight: bold;
-  border-bottom: 3px solid #fece00;
-}
-*/
-
-.resume-wrap span.highlight-color {
-  color: #333;
-  font-weight: bold;
-/*  border-bottom: 3px solid #fece00;*/
-position: relative;
+  position: relative;
 }
 
-.resume-wrap span.highlight-color:after {
+span.highlight-color:after {
   content: "";
   position: absolute;
   left: 0;
