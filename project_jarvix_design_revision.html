@@ -26,6 +26,23 @@
     gtag('js', new Date());
     gtag('config', 'G-LFRFJMZKN0');
     </script>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("toTop").style.display = "block";
+        } else {
+            document.getElementById("toTop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+         $('html, body').animate({scrollTop:0}, 'slow');
+    }
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     
@@ -212,7 +229,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）元組件隨著產品<b>規模越大</b>，數量也變得越多，導致<b>管理困難度很高</b>。</p>
+              <p><span class="point before">Ａ</span>元組件隨著產品<b>規模越大</b>，數量也變得越多，導致<b>管理困難度很高</b>。</p>
               <ul>
                 <li>加入不同方式的檢視工具，因應不同時候的狀況可作資料表顯示上的彈性調整。</li>
               </ul>
@@ -277,7 +294,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｂ）舊色彩計畫較為基礎，隨著產品越來越複雜，<b>色彩定義的不足</b>情況也開始凸顯。</p>
+              <p><span class="point before">Ｂ</span>舊色彩計畫較為基礎，隨著產品越來越複雜，<b>色彩定義的不足</b>情況也開始凸顯。</p>
               <ul>
                 <li><b>色彩定義不夠細節</b>，因此相同顏色被使用在很多不同地方(ex. 底色、邊線)，導致<b>無法輕易調整顏色</b>。</li>
               </ul>
@@ -315,7 +332,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）落實<b>「原子設計」</b>概念，儘可能完整定義元素、元件後再進行組件製作。</p>
+              <p><span class="point after">Ａ</span>落實<b>「原子設計」</b>概念，儘可能完整定義元素、元件後再進行組件製作。</p>
               <ul>
                 <li><b>定義基礎元素</b>，例如：文字的字體大小、色彩計畫、符號、間距、Layout Grid...等。</li>
               </ul>
@@ -431,7 +448,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）所有設定類型的內容皆採用 Dialog 形式作呈現，當遇到複雜的內容時，就會遇到顯示上的設計限制，並影響操作體驗。</p>
+              <p><span class="point before">Ａ</span>所有設定類型的內容皆採用 Dialog 形式作呈現，當遇到複雜的內容時，就會遇到顯示上的設計限制，並影響操作體驗。</p>
               <ul>
                 <li>當遇到需要有次階層的設定內容或需要呈現再次確認的情況時，則必須想辦法採用其他方式來避免，兩個 Dialog 重複堆疊的情況。</li>
               </ul>
@@ -464,7 +481,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｂ）當遇到多階層的資訊或多設定項時，常常使用色塊來劃分群組範圍，導致<b>色塊堆疊容易過多，</b>，產生不必要的視覺負擔，以及過多內邊距產生的<b>空間浪費</b>。</p>
+              <p><span class="point before">Ｂ</span>當遇到多階層的資訊或多設定項時，常常使用色塊來劃分群組範圍，導致<b>色塊堆疊容易過多，</b>，產生不必要的視覺負擔，以及過多內邊距產生的<b>空間浪費</b>。</p>
               <ul>
                 <li>表格欄位為要區隔不同資料內容，而疊加多種顏色，導致表格呈現異常突兀。</li>
               </ul>
@@ -509,7 +526,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）盤點目前所有的設定畫面內容，將設定內容改為<b>以頁面形式做呈現</b>，而 Dialog 則作為頁面的延伸顯示區塊，透過區分不同階層的內容顯示分工，讓可承載內容的彈性可以更好。</p>
+              <p><span class="point after">Ａ</span>盤點目前所有的設定畫面內容，將設定內容改為<b>以頁面形式做呈現</b>，而 Dialog 則作為頁面的延伸顯示區塊，透過區分不同階層的內容顯示分工，讓可承載內容的彈性可以更好。</p>
             </div>
             <div class="col-lg-8">
               <div class="image-group text-center mb-3">
@@ -565,7 +582,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｂ）重新設計和規劃多資訊階層內容的呈現方式，<b>避免過多色塊堆疊</b>，造成顯示邏輯混亂以及視覺負擔。</p>
+              <p><span class="point after">Ｂ</span>重新設計和規劃多資訊階層內容的呈現方式，<b>避免過多色塊堆疊</b>，造成顯示邏輯混亂以及視覺負擔。</p>
               <ul>
                 <li>頁面內容第一層資訊避免直接使用區域色塊作劃分，<b>區塊顏色也謹慎選擇具有深淺差異</b>，但又不過於突兀的配色。</li>
               </ul>
@@ -619,7 +636,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）隨著產品的發展，<b>舊資訊架構設計也與現行需求不符</b>。</p>
+              <p><span class="point before">Ａ</span>隨著產品的發展，<b>舊資訊架構設計也與現行需求不符</b>。</p>
               <ul>
                 <li>舊 Navigation 資訊架構為雙階層，原第一階層用途為擴充更多的產品模組，但目前產品設計方向並沒有要往此發展，因此部會有新項目出現，並且由於權限控管導致多數使用者顯示的功能更少。</li>
               </ul>
@@ -638,7 +655,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｂ）智能分析功能的問句結果，新功能需求大幅度的要擴增進來，但舊介面並<b>沒有規劃擴充方式</b>，導致部分功能不容易被人發覺。</p>
+              <p><span class="point before">Ｂ</span>智能分析功能的問句結果，新功能需求大幅度的要擴增進來，但舊介面並<b>沒有規劃擴充方式</b>，導致部分功能不容易被人發覺。</p>
             </div>
             <div class="col-lg-8">
               <div class="image-group text-center">
@@ -650,7 +667,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｃ）「專案釘板、戰情室、應用程式」應用情境不太相同，但隨著不同階段的產品開發，導致需要的<b>基礎功能越來越相似相似</b>，許多用戶提出到想要在 A 功能也能夠支援 B 功能的某種功能，造成功能之間的<b>定位越來越模糊及功能重複開發的問題產生</b>。</p>
+              <p><span class="point before">Ｃ</span>「專案釘板、戰情室、應用程式」應用情境不太相同，但隨著不同階段的產品開發，導致需要的<b>基礎功能越來越相似相似</b>，許多用戶提出到想要在 A 功能也能夠支援 B 功能的某種功能，造成功能之間的<b>定位越來越模糊及功能重複開發的問題產生</b>。</p>
             </div>
             <div class="col-lg-8">
               <div class="image-group text-center">
@@ -670,7 +687,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ａ）<b>重新設計資訊架構</b>，將多階層的 Navigation 整併。</p>
+              <p><span class="point after">Ａ</span><b>重新設計資訊架構</b>，將多階層的 Navigation 整併。</p>
               <ul>
                 <li>透過階層的減少，可以更好配合產品策略<b>凸顯重點功能</b>。</li>
                 <li>由於功能位置大幅的調整，所以也盡量保留各功能原有操作方式，避免用戶需要適應過多的異動產生不適。</li>
@@ -690,7 +707,7 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｂ）盤點所有目前以及未來功能需求，定義功能和顯示之間的互動關係，<b>重新規劃 UI 的佈局呈現</b>，並保有持續擴增的空間。</p>
+              <p><span class="point after">Ｂ</span>盤點所有目前以及未來功能需求，定義功能和顯示之間的互動關係，<b>重新規劃 UI 的佈局呈現</b>，並保有持續擴增的空間。</p>
             </div>
             <div class="col-lg-8">
               <div class="image-group text-center">
@@ -702,16 +719,20 @@
 
           <div class="row mb-5 ftco-animate">
             <div class="col-lg-4">
-              <p>Ｃ）盤點「專案釘板、戰情室、應用程式」的所有功能進行分類，<b>列出相同與差異的項目</b>，並將其項目集中整併到「應用程式」，成為可以滿足更多情境需求的產品核心功能。</p>
+              <p><span class="point after">Ｃ</span>盤點「專案釘板、戰情室、應用程式」的所有功能進行分類，<b>列出相同與差異的項目</b>，並將其項目集中整併到「應用程式」，成為可以滿足更多情境需求的產品核心功能。</p>
             </div>
             <div class="col-lg-8">
               <div class="image-group text-center mb-3">
                 <img src="images/image2-43.png" alt="" class="img-fluid">
                 <span class="image-description">(新版，功能盤點)</span>
               </div>
-              <div class="image-group text-center">
+              <div class="image-group text-center mb-3">
                 <img src="images/image2-44.png" alt="" class="img-fluid">
-                <span class="image-description">(新版，功能整併)</span>
+                <span class="image-description">(新版，功能分類)</span>
+              </div>
+              <div class="image-group text-center">
+                <img src="images/image2-58.png" alt="" class="img-fluid">
+                <span class="image-description">(新版，功能整併後)</span>
               </div>
             </div>
           </div><!-- row : END -->
@@ -875,6 +896,8 @@
         </div>
       </footer>
       
+
+      <div onclick="topFunction()" class="btn-primary" id="toTop"><i class="ion-ios-arrow-up"></i></div>
       
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

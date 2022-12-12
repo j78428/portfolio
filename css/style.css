@@ -2079,7 +2079,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
+  background-color: #045294;
   border-color: #007bff; }
   .btn-primary:hover {
     color: #fff;
@@ -10010,6 +10010,36 @@ span.highlight-color:after {
 }
 
 
+span.point {
+    color: #000;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+span.point.before {
+    border: 2px solid #faa30d;
+    color: #faa30d;
+}
+
+
+span.point.after {
+    border: 2px solid #65e031;
+    color: #65e031;
+}
+
+
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
 
 
 

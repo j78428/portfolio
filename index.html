@@ -31,6 +31,23 @@
 
 		  gtag('config', 'G-LFRFJMZKN0');
 		</script>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("toTop").style.display = "block";
+        } else {
+            document.getElementById("toTop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+         $('html, body').animate({scrollTop:0}, 'slow');
+    }
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -208,12 +225,11 @@
 		    						<li>其他客製化系統設計，如：全球汽車玻璃製造商的「物料分析系統」、台灣 LED 電子製造商「機台監控系統」...等。</li>
 		    						<li>擔任設計<span class="highlight-color">部門主管</span>，負責工作任務發配、設計任務討論發想、內部設計成果檢視、制定內部協作方式。</li>
 		    					</ul>
-		    					<!-- <div class="link-group pb-3">
-		    						<a href="project_1_1.html" target="_blank" class="btn btn-lg btn-secondary">JarviX 智能分析功能改版</a>
-		    						<a href="project_1_2.html" target="_blank" class="btn btn-lg btn-secondary">JarviX Design System</a>
-		    						<a href="project_2.html" target="_blank" class="btn btn-lg btn-secondary">電壓異常監控看板</a>
-		    						<a href="project_3.html" target="_blank" class="btn btn-lg btn-secondary">機台健康度監測看板</a>
-		    					</div> -->
+		    					<div class="link-group pb-3">
+		    						<a href="project_jarvix_revision.html" target="_blank" class="btn btn-lg btn-secondary">JarviX 智能分析改版 - 降低使用門檻，讓分析更上手</a>
+		    						<a href="project_jarvix_design_revision.html" target="_blank" class="btn btn-lg btn-secondary">JarviX 介面改版 - 介面除舊佈新，提升可管理性</a>
+		    						<a href="project_scheduling_system.html" target="_blank" class="btn btn-lg btn-secondary">智能排程系統 - 縮短人工計畫時間，降低計畫異動成本。</a>
+		    					</div>
 		    					
 		    				</div>
 	    				</div>
@@ -247,10 +263,6 @@
 		    						<li>網頁 <span class="highlight-color">HTML + CSS 切版</span>，與前端工程師溝通功能實作。</li>
 		    						<li>其他專案設計，如「Email 存證」的用戶端使用管理平台、Chrome 瀏覽器 Extension 介面設計。</li>
 		    					</ul>
-		    					<!-- <div class="link-group pb-3">
-		    						<a href="project_4.html" target="_blank" class="btn btn-lg btn-secondary">區塊鏈存證王 形象網站</a>
-		    						<a href="project_5.html" target="_blank" class="btn btn-lg btn-secondary">區塊鏈存證王 售價內容設定平台</a>
-		    					</div> -->
 		    				</div>
 	    				</div>
 	    				<div class="resume-wrap d-flex ftco-animate">
@@ -268,11 +280,11 @@
 		    						<li>經手前台的網站設計，如：旅行社網站 Web Design、飯店訂房網站 Web & APP、機票訂位網站 Web、虛擬幣交易平台網站 Web...等。</li>
 		    						<li>針對公司內部使用的<span class="highlight-color">管理系統設計</span>，如：網站內容管理系統、公司會員管理系統、多類型訂單管理系統、多類型產品管理系統...等<span class="highlight-color">10多個系統</span>。</li>
 		    					</ul>
-		    					<!-- <div class="link-group pb-3">
-		    						<a href="project_6.html" target="_blank" class="btn btn-lg btn-secondary">福泰旅遊網站改版</a>
-		    						<a href="project_7.html" target="_blank" class="btn btn-lg btn-secondary">機票訂位平台</a>
-		    						<a href="project_8.html" target="_blank" class="btn btn-lg btn-secondary">飯店訂房平台</a>
-		    					</div> -->
+		    					<div class="link-group pb-3">
+		    						<a href="project_tristar.html" target="_blank" class="btn btn-lg btn-secondary">福泰旅遊 - 網站改版</a>
+		    						<a href="project_order_system.html" target="_blank" class="btn btn-lg btn-secondary">訂單管理系統 - 理單、下單一站完成</a>
+		    						<a href="project_product_system.html" target="_blank" class="btn btn-lg btn-secondary">產品管理系統 - 飯店、行程各類產品一併管理</a>
+		    					</div>
 		    				</div>
 	    				</div>
 					  </div>
@@ -444,6 +456,8 @@
       </div>
     </footer>
     
+
+    <div onclick="topFunction()" class="btn-primary" id="toTop"><i class="ion-ios-arrow-up"></i></div>
   
 
   <!-- loader -->

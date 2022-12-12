@@ -26,6 +26,23 @@
     gtag('js', new Date());
     gtag('config', 'G-LFRFJMZKN0');
     </script>
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("toTop").style.display = "block";
+        } else {
+            document.getElementById("toTop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+         $('html, body').animate({scrollTop:0}, 'slow');
+    }
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     
@@ -176,6 +193,8 @@
         </div>
       </footer>
       
+
+      <div onclick="topFunction()" class="btn-primary" id="toTop"><i class="ion-ios-arrow-up"></i></div>
       
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
