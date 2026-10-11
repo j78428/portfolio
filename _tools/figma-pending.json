@@ -58,41 +58,5 @@
   "page": "tuoyoujia-app",
   "node": "（待提供）",
   "title": "教室觸控大屏畫面"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9111:86242",
-  "title": "睡眠偵測主畫面：每個寶寶一張卡片，異常以紅框標示，右側集中列出待確認的警示。",
-  "lowres": "home/sleep.webp"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9217:48452",
-  "title": "呼吸告警規則說明"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9217:48449",
-  "title": "活動偵測規則"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9340:57637",
-  "title": "睡眠偵測：表格版面"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9112:110434",
-  "title": "睡眠偵測：詳情與提醒紀錄"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9169:53011",
-  "title": "睡眠偵測：睡眠階段列表版"
- },
- {
-  "page": "tuoyoujia-sleep",
-  "node": "9217:41657",
-  "title": "睡眠偵測：睡眠階段詳情"
  }
 ]
