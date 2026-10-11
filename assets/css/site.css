@@ -302,3 +302,28 @@ dialog.lightbox img { max-width: 96vw; width: auto; border-radius: 10px; }
 dialog.lightbox.fit img { max-height: 88vh; }
 dialog.lightbox button { position: fixed; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--yellow); color: var(--navy-deep); font-size: 22px; font-weight: 700; cursor: pointer; z-index: 2; }
 dialog.lightbox p { color: rgba(255, 255, 255, .85); font-size: 14px; text-align: center; margin: 10px 0 0; }
+
+/* Before / After rows: one problem per row, key images aligned */
+.ba { margin: 8px 0 24px; }
+.ba-row { border-top: 1px solid var(--line); padding: 28px 0 8px; }
+.ba-row h4 { font-size: 17px; margin: 0 0 16px; display: flex; gap: 10px; align-items: baseline; }
+.ba-key { flex: none; font-size: 13px; font-weight: 700; color: var(--navy); background: var(--navy-soft); border-radius: 6px; padding: 1px 8px; }
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "bt at" "bf af"; column-gap: 28px; row-gap: 12px; }
+.ba-bt { grid-area: bt; } .ba-at { grid-area: at; } .ba-bf { grid-area: bf; } .ba-af { grid-area: af; }
+.ba-bt p, .ba-at p { font-size: 15.5px; margin: 4px 0 0; }
+.ba-bt .side-label { background: #e6e9ef; color: var(--ink-2); }
+.ba-at .side-label { background: var(--navy); color: #fff; }
+.ba-at .side-label::after { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); margin-left: 6px; vertical-align: middle; }
+.ba-bf figure, .ba-af figure { margin: 0; }
+.ba-bf .frame img, .ba-af .frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: var(--bg-alt); }
+.ba-af .frame { border-color: #c9d5ee; }
+.ba-more { margin: 14px 0 0; }
+.ba-more summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--navy); width: fit-content; padding: 6px 0; }
+.ba-more summary:hover { text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 3px; }
+.ba-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.ba-extra figure { margin: 14px 0; }
+@media (max-width: 820px) {
+  .ba-grid { grid-template-columns: 1fr; grid-template-areas: "bt" "bf" "at" "af"; }
+  .ba-at { margin-top: 12px; }
+  .ba-extra { grid-template-columns: 1fr; gap: 0; }
+}

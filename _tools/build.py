@@ -101,6 +101,26 @@ def render(blocks, slug):
                        f'<div class="before"><span class="side-label">BEFORE</span>{render(before, slug)}</div>'
                        f'<div class="after"><span class="side-label">AFTER</span>{render(after, slug)}</div>'
                        "</div>")
+        elif kind == "ba":
+            # One row per problem: Before / After side by side, one key image each,
+            # extra screens folded into <details>.
+            rows = []
+            for r in b[1]:
+                bt, bfig, bmore = r["before"]
+                at, afig, amore = r["after"]
+                more = ""
+                if bmore or amore:
+                    n = len(bmore) + len(amore)
+                    more = ('<details class="ba-more"><summary>看更多畫面（%d）</summary><div class="ba-extra">'
+                            '<div>%s</div><div>%s</div></div></details>') % (
+                        n, "".join(fig(f, slug) for f in bmore), "".join(fig(f, slug) for f in amore))
+                rows.append(
+                    f'<div class="ba-row"><h4><span class="ba-key">{r["key"]}</span>{r["title"]}</h4><div class="ba-grid">'
+                    f'<div class="ba-bt"><span class="side-label">BEFORE</span><p>{bt}</p></div>'
+                    f'<div class="ba-at"><span class="side-label">AFTER</span><p>{at}</p></div>'
+                    f'<div class="ba-bf">{fig(bfig, slug)}</div><div class="ba-af">{fig(afig, slug)}</div>'
+                    f'</div>{more}</div>')
+            out.append('<div class="ba">' + "".join(rows) + "</div>")
         elif kind == "tabs":
             tabs, panels = [], []
             for i, t in enumerate(b[1]):
