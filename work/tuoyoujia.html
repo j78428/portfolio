@@ -43,7 +43,8 @@
       <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">目標</a></li><li><a href="#challenge">困難</a></li><li><a href="#process">過程</a></li><li><a href="#result">結果</a></li></ol></nav>
       <article class="prose">
 <section id="goal"><h2><span class="num">01</span>目標</h2>
-<p>把托幼加從 1.0 改版成 2.0。讓系統管理員、校方、老師、醫護人員和家長打開系統時，都只看到自己需要的內容，用起來更直覺、更省力。</p>
+<p>好學原本的系統，只服務自家園所和部分園所。公司的商業策略轉向<strong>平台化</strong>，要讓托幼加開放給更多外部園所使用，所以決定從 1.0 大改版成 2.0。</p>
+<p>改版要讓系統管理員、校方、老師、醫護人員和家長打開系統時，都只看到自己需要的內容，用起來更直覺、更省力。</p>
 <ul class="cards three"><li><span class="n">1</span><b>依角色拆分介面與權限</b><span>每個角色只看到、只能操作跟自己有關的內容。</span></li><li><span class="n">2</span><b>讓管理者處理校務更省力</b><span>特別是每學期的換班、調人。</span></li><li><span class="n">3</span><b>手機上第一眼就看到重點</b><span>老師和家長打開小程序，首屏就是最重要的資訊。</span></li></ul>
 </section><section id="challenge"><h2><span class="num">02</span>困難</h2>
 <p>托幼加的使用者分好幾層，每一層要做的事完全不同：</p>
@@ -51,17 +52,28 @@
 <p>在中國的托育機構，教職員又細分成<strong>保育人員、教學人員、醫護人員</strong>，各自負責不同的事。</p>
 <div class="callout"><p>例如餵藥，就只有醫務人員能做。同一個系統，不同角色要看到的內容、要關注的事都不一樣。</p></div>
 <h3>1.0 用起來的困擾</h3>
-<ul><li>大家打開系統看到的東西太多太雜，還會看到不該看的內容。</li><li>有些介面的呈現和用法，不適合實際的使用情境。</li><li>每學期的換班、調人，管理者要花很多力氣。</li><li>好學有自己的教案和教材，要能授權給各校，再讓各校自由排課。</li></ul>
+<p>1.0 是兩三年前早期團隊做的，當時缺少系統架構和資訊架構的討論。我自己用的時候也常踩坑，常想：為什麼這個介面會一直讓人出錯？</p>
+<ul><li>功能分類、各角色的分層功能、各角色該看到的介面都很混亂。新功能一出來就往上疊，系統越來越難學、難用。</li><li>資料同步容易出錯：改了 A，以為 B、C 會跟著更新，其實得自己記得一個個去改，不然系統就會出現錯誤。</li><li>管理的維度很複雜：自家園所、非自家園所，還有集團本身，這些角色在舊系統裡都定義得很模糊。</li><li>大家打開系統看到的東西太多太雜，還會看到不該看的內容；有些介面的呈現和用法，也不適合實際的使用情境。</li><li>每學期的換班、調人，管理者要花很多力氣。</li><li>好學有自己的教案和教材，要能授權給各校，再讓各校自由排課。</li></ul>
 <figure><button class="zoom" type="button" aria-label="放大檢視：托幼加 1.0 保育紀錄畫面"><div class="frame"><img src="../assets/img/tuoyoujia/care-v1.webp" width="1920" height="1035" alt="托幼加 1.0 保育紀錄畫面" loading="lazy"></div></button><figcaption>1.0 的保育紀錄畫面。截圖中的幼兒個資已做模糊處理。</figcaption></figure>
 </section><section id="process"><h2><span class="num">03</span>過程</h2>
+<h3>我的角色與合作方式</h3>
+<p>我是團隊唯一的設計師。我和 PM 在台灣負責規劃，工程團隊在中國負責開發。</p>
+<ul class="cards three"><li><b>和 PM 一起規劃</b><span>梳理既有功能、訪談使用者，定出功能分類、資訊架構，以及角色的定位、分層與邊界。</span></li><li><b>跨海和工程溝通</b><span>透過會議和設計文件上的註解，說明每個畫面想呈現的方式。</span></li><li><b>全部的介面設計</b><span>管理後台 Web、老師端與家長端小程序。</span></li></ul>
+<h3>盤點既有功能、訪談使用者</h3>
+<p>我和 PM 先把 1.0 既有的功能逐一梳理，同時訪談既有的使用者：大約 5～6 間園所，主要是園長。再依照訪談結果，逐步定出功能分類、資訊架構，以及每個角色的定位、分層和邊界。角色那麼多，這一段花了非常多時間溝通。</p>
 <h3>先釐清：誰在用、要做什麼</h3>
 <p>改版的第一步，是把每一種使用者的使用目的和使用裝置整理清楚。這決定了後面每個功能該放在哪個平台、給誰看。</p>
 <figure data-figma="152:1276"><button class="zoom" type="button" aria-label="放大檢視：使用者類型與使用目的"><div class="frame"><span class="badge-export">預覽圖・待匯出高解析</span><img src="../assets/img/tuoyoujia/roles.webp" width="1020" height="1439" alt="使用者類型與使用目的" loading="lazy"></div></button><figcaption>整理出 6 種使用者的使用目的與裝置：管理者主要用電腦，主管、老師、行政電腦手機都會用，家長只用手機。</figcaption></figure>
+<h3>關鍵決策①：把好學定位成「系統平台商」</h3>
+<p>權限最難切的，是自家園所、非自家園所和集團之間的關係。討論到最後，我們認為它們其實都只是「服務的單位」：把好學的角色提升為<strong>系統平台商</strong>，不管是不是集團裡的園所，都是平台的客戶。</p>
+<div class="callout"><p>用「平台商與客戶」的關係去切分權限和管理，原本糾纏在一起的角色，一下子單純多了。</p></div>
+<p>當時其實找不到可以參考的做法：同樣是集團等級、自己開發系統，又要同時服務自家和外部園所的案例，我們沒有找到。</p>
 <h3>重新規劃 2.0 架構</h3>
 <p>根據使用者類型重新規劃 2.0 的網站架構，再分別整理每種角色看得到的功能範圍。權限分清楚之後，每個人打開系統只會看到跟自己有關的內容。</p>
 <figure data-figma="150:2316"><button class="zoom" type="button" aria-label="放大檢視：托幼加 2.0 網站架構圖"><div class="frame tall"><span class="badge-export">預覽圖・待匯出高解析</span><img src="../assets/img/tuoyoujia/sitemap.webp" width="768" height="2276" alt="托幼加 2.0 網站架構圖" loading="lazy"><span class="more">點擊看完整圖</span></div></button><figcaption>2.0 網站架構（點擊看完整架構）。</figcaption></figure>
-<h3>依角色拆分介面</h3>
-<p>儀表板依使用者拆成不同版本：校方管理者、班級、老師、醫護人員，各自看到自己需要關注的指標和待辦。切換看看：</p>
+<h3>關鍵決策②：一個總覽儀表板，加上各角色的小儀表板</h3>
+<p>中國托育機構的分工非常細，和台灣差很多，但系統也要讓台灣的園所使用。不同的人代表不同的工作內容，所以我們把工作內容拆開：<strong>一個大的儀表板關注整體</strong>，再由<strong>不同的小儀表板</strong>關注各自負責的事。</p>
+<p>校方管理者、班級、老師、醫護人員，各自看到自己需要關注的指標和待辦。切換看看：</p>
 <div class="tabs" data-tabs><div class="tablist" role="tablist" aria-label="切換角色"><button role="tab" id="tab-admin" aria-controls="panel-admin" aria-selected="true">校方管理者</button><button role="tab" id="tab-class" aria-controls="panel-class" aria-selected="false" tabindex="-1">班級</button><button role="tab" id="tab-teacher" aria-controls="panel-teacher" aria-selected="false" tabindex="-1">老師</button><button role="tab" id="tab-med" aria-controls="panel-med" aria-selected="false" tabindex="-1">醫護人員</button></div><div class="tabpanel" role="tabpanel" id="panel-admin" aria-labelledby="tab-admin" tabindex="0"><p class="focus"><b>關注：</b><span>全園今天的出勤、病假、師生比、活動完成率，以及招生和家長滿意度。</span></p><figure><button class="zoom" type="button" aria-label="放大檢視：校園儀表板"><div class="frame"><img src="../assets/img/tuoyoujia/dash-admin.webp" width="1920" height="1080" alt="校園儀表板" loading="lazy"></div></button></figure></div><div class="tabpanel" role="tabpanel" id="panel-class" aria-labelledby="tab-class" tabindex="0" hidden><p class="focus"><b>關注：</b><span>班上每位學生今天的狀況，家長交辦、托藥等特殊事項直接標在學生卡片上。</span></p><figure><button class="zoom" type="button" aria-label="放大檢視：班級儀表板"><div class="frame"><img src="../assets/img/tuoyoujia/dash-class.webp" width="1920" height="1080" alt="班級儀表板" loading="lazy"></div></button></figure></div><div class="tabpanel" role="tabpanel" id="panel-teacher" aria-labelledby="tab-teacher" tabindex="0" hidden><p class="focus"><b>關注：</b><span>自己班級的出勤與記錄完成度、待辦列表，以及學期行事曆。</span></p><figure><button class="zoom" type="button" aria-label="放大檢視：老師儀表板"><div class="frame"><img src="../assets/img/tuoyoujia/dash-teacher.webp" width="1920" height="1080" alt="老師儀表板" loading="lazy"></div></button></figure></div><div class="tabpanel" role="tabpanel" id="panel-med" aria-labelledby="tab-med" tabindex="0" hidden><p class="focus"><b>關注：</b><span>托藥處理只開放給醫務人員：依時段列出今天要餵藥的學生，記錄給藥並留下簽名。</span></p><figure><button class="zoom" type="button" aria-label="放大檢視：托藥處理"><div class="frame"><img src="../assets/img/tuoyoujia/medicine.webp" width="1920" height="1080" alt="托藥處理" loading="lazy"></div></button></figure></div></div>
 <h3>教案授權與排課</h3>
 <p>好學把自有的教案和教材<strong>授權</strong>給每一間學校，各校再依自己的需要，自由安排不同班級要上的課程。</p>
@@ -74,8 +86,16 @@
 <div class="phones"><figure data-figma="8355:88545"><div class="frame placeholder" style="--ar:375 / 812"><span class="tag">待匯出</span><b>老師端小程序主頁（新版）</b><span>Figma 節點 8355:88545</span></div><figcaption>老師端：今日班級概況與待辦</figcaption></figure><figure data-figma="9262:94649"><button class="zoom" type="button" aria-label="放大檢視：家長端小程序主頁"><div class="frame"><span class="badge-export">預覽圖・待匯出高解析</span><img src="../assets/img/tuoyoujia/app-parent.webp" width="375" height="812" alt="家長端小程序主頁" loading="lazy"></div></button><figcaption>家長端：寶寶今日保育總結</figcaption></figure></div>
 <div class="next-grid"><a class="next-card" href="tuoyoujia-app.html"><b>看小程序與觸控大屏的設計 →</b><span>延伸案例</span></a></div>
 </section><section id="result"><h2><span class="num">04</span>結果</h2>
-<div class="outcome"><div class="big">40<small>間</small></div><div><p><strong>2.0 已上線，約 40 間托育機構在使用。</strong>老師的回饋：</p>
-<ul><li>資訊變得簡單明瞭</li><li>權限分清楚了，不會看到不該看的內容</li><li>介面的呈現和用法，更符合實際的使用情境</li></ul></div></div>
+<div class="outcome"><div class="big">40<small>間</small></div><div><p><strong>2.0 已上線，約 40 間托育機構在使用。</strong>從使用者的問題回饋和老師的反應來看：</p>
+<ul><li>找不到資訊、不知道該點哪裡、該按什麼的狀況，明顯變少了</li><li>資訊變得簡單明瞭</li><li>權限分清楚了，不會看到不該看的內容</li><li>介面的呈現和用法，更符合實際的使用情境</li></ul></div></div>
+<h3>怎麼上線</h3>
+<p>既有客戶直接從舊系統換到新系統。換之前，我們先辦了一場發布會，介紹新系統多了哪些資源、優化了哪些地方，再透過教育訓練教大家怎麼操作。</p>
+<h3>還沒解決的事</h3>
+<p>教育訓練的成本並沒有因此降低。系統本身真的很龐大，功能多、角色多，就算介面更清楚了，要學的東西還是很多。</p>
+<h3>如果繼續做下去</h3>
+<p>我希望做到：<strong>使用者一進來，不需要我們教，就知道怎麼用。</strong>所以下一步最重要的是新手引導，以及各個功能、各種情境的引導。</p>
+<p>像排課這種比較複雜的功能，操作面向很多，最需要引導來幫使用者建立初步的認識。這也是我在 JarviX 做過的事：依使用者所處的階段，提供不同的引導。</p>
+<p>還有一個當初沒預料到的好處：因為用「平台商與客戶」的關係切分，平台也能交付給其他園所，讓他們自己管理旗下的兩三間園所。</p>
 <h3>改版前後</h3>
 <p>同樣是記錄學生的保育狀況。拖曳中間的把手，比較 1.0 和 2.0：</p>
 <div class="compare" style="--pos:50%"><img src="../assets/img/tuoyoujia/care-v2.webp" width="1920" height="1080" alt="2.0 每日保育：以時間軸呈現全班" loading="lazy"><div class="before"><img src="../assets/img/tuoyoujia/care-v1.webp" width="1920" height="1035" alt="1.0 保育紀錄：以表格逐一查看單一學生" loading="lazy"></div><div class="handle" aria-hidden="true"></div><span class="label l">1.0</span><span class="label r">2.0</span><input type="range" min="0" max="100" value="50" aria-label="拖曳比較1.0與2.0"></div><figcaption>左：1.0 以表格逐一查看單一學生的紀錄；右：2.0 用時間軸一次呈現全班。1.0 截圖中的幼兒個資已做模糊處理。</figcaption>
