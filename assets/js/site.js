@@ -75,6 +75,9 @@
       const img = b.querySelector('img');
       big.src = img.currentSrc || img.src;
       big.alt = img.alt;
+      // Very tall images (sitemaps, long pages) scroll instead of shrinking to fit
+      dlg.classList.toggle('fit', img.naturalHeight / img.naturalWidth < 1.8);
+      dlg.scrollTop = 0;
       cap.textContent = b.closest('figure')?.querySelector('figcaption')?.textContent || '';
       dlg.showModal();
     }));

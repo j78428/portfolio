@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>製造機台監控看板｜Joseph Wu</title>
+  <meta name="description" content="LED 封裝製程預測系統的監控看板：從廠區到站台的資訊架構、Drilldown 與麵包屑切換設計。">
+  <meta property="og:title" content="製造機台監控看板：從廠區到站台，一頁掌握、隨時切換">
+  <meta property="og:description" content="LED 封裝製程預測系統的監控看板：從廠區到站台的資訊架構、Drilldown 與麵包屑切換設計。">
+  <meta property="og:image" content="../assets/img/factory-dashboard/18.webp">
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">J</span>Joseph Wu</a>
+      <nav class="nav" aria-label="主選單">
+        <a href="../#work">作品</a>
+        <a href="../#experience">經歷</a>
+        <a href="../#contact">聯絡</a>
+        <a class="btn-pill" href="https://joserenfu.com/joseph_resume" target="_blank" rel="noopener">下載履歷</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <header class="case-hero">
+        <a class="back" href="../#work"><span aria-hidden="true">←</span> 所有作品</a>
+        <span class="eyebrow">Synergies｜製造業 SaaS</span>
+        <h1>製造機台監控看板：從廠區到站台，一頁掌握、隨時切換</h1>
+        <p class="lead">LED 封裝製程預測系統中的監控看板。客戶要能從廠區一路往下看到產線和站台，也要能隨時切換、比較。這篇說明看板的資訊架構與操作流程設計。</p>
+        <dl class="summary" style="--cols:4"><div><dt>角色</dt><dd>UI / UX Designer</dd></div><div><dt>負責內容</dt><dd>需求了解、資訊架構、操作流程<br>Wireframe</dd></div><div><dt>類型</dt><dd>UX・Dashboard</dd></div><div><dt>公司</dt><dd>Synergies<br>2019 – 2023</dd></div></dl>
+        <div class="case-cover"><figure style="margin:0"><button class="zoom" type="button" aria-label="放大檢視：監控看板 UI"><div class="frame"><img src="../assets/img/factory-dashboard/18.webp" width="1100" height="612" alt="監控看板 UI" fetchpriority="high"></div></button><figcaption>監控看板 UI（個人額外製作）。</figcaption></figure></div>
+      </header>
+    </div>
+    <div class="wrap case-layout">
+      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">目標</a></li><li><a href="#challenge">困難</a></li><li><a href="#process">過程</a></li><li><a href="#result">結果</a></li></ol></nav>
+      <article class="prose">
+<section id="goal"><h2><span class="num">01</span>目標</h2>
+<p>為電子製造業的 LED 封裝製程預測系統設計監控看板（系統另外包含製程參數最佳化、生產良率預測等功能），讓使用者在同一個看板上，掌握各廠、各線的即時狀態。</p>
+</section><section id="challenge"><h2><span class="num">02</span>困難</h2>
+<ul class="cards"><li><span class="n">1</span><b>觀看維度要能彈性來回切換</b><span>客戶原本的看板可以從廠區往下看到大線別、小線別和站台，但要回上一層，只能從最上層重新點下來。要交叉比較時，只能開好幾個瀏覽器分頁切換。</span></li><li><span class="n">2</span><b>圖表很多，但頁面不能太長</b><span>除了稼動率、良率等重要 KPI 和下一階單位的運作資訊，還要看過去一段時間的 KPI 趨勢，又希望不用滾動太長就能看完。</span></li></ul>
+</section><section id="process"><h2><span class="num">03</span>過程</h2>
+<figure><button class="zoom" type="button" aria-label="放大檢視：設計流程。"><div class="frame"><img src="../assets/img/factory-dashboard/21.webp" width="1600" height="280" alt="設計流程。" loading="lazy"></div></button><figcaption>設計流程。</figcaption></figure>
+<h3>資訊架構規劃</h3>
+<p>看板要涵蓋四個層級，由大到小是：廠區、大產線別、小產線別、站台。從 Function Map 發現，雖然觀看維度不同，需要的資訊項目卻是一樣的。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：Sitemap"><div class="frame"><img src="../assets/img/factory-dashboard/2.webp" width="825" height="400" alt="Sitemap" loading="lazy"></div></button><figcaption>Sitemap</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：單位階層示意"><div class="frame"><img src="../assets/img/factory-dashboard/1.webp" width="1110" height="543" alt="單位階層示意" loading="lazy"></div></button><figcaption>單位階層示意</figcaption></figure></div>
+<figure><button class="zoom" type="button" aria-label="放大檢視：Function Map。"><div class="frame"><img src="../assets/img/factory-dashboard/3.webp" width="825" height="400" alt="Function Map。" loading="lazy"></div></button><figcaption>Function Map。</figcaption></figure>
+<p>Wireframe 把頁面分成三個區塊：</p>
+<ul><li>① 這個維度當日的綜合 KPI，例如 A 廠區底下所有線別的當日 KPI。</li><li>② 各種 KPI 從過去到現在的趨勢，例如 A 廠區底下各線別的稼動率趨勢。</li><li>③ 下一階單位的運作狀況，例如 A 廠區底下所有線別的細節。</li></ul>
+<figure><button class="zoom" type="button" aria-label="放大檢視：Wireframe：資訊區塊規劃。"><div class="frame"><img src="../assets/img/factory-dashboard/4.webp" width="825" height="400" alt="Wireframe：資訊區塊規劃。" loading="lazy"></div></button><figcaption>Wireframe：資訊區塊規劃。</figcaption></figure>
+<h3>版面規劃</h3>
+<p>左側顯示目前層級的當日 KPI 綜合統計。趨勢圖用 Tab 切換，在同一個區塊顯示不同圖表，不會因為圖表種類多就讓版面擁擠或變長。下方的下一階單位概況，會跟著上方趨勢圖正在看的主題一起切換。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：主要 KPI 指標"><div class="frame"><img src="../assets/img/factory-dashboard/5.webp" width="825" height="400" alt="主要 KPI 指標" loading="lazy"></div></button><figcaption>主要 KPI 指標</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：KPI 紀錄趨勢圖表"><div class="frame"><img src="../assets/img/factory-dashboard/6.webp" width="825" height="400" alt="KPI 紀錄趨勢圖表" loading="lazy"></div></button><figcaption>KPI 紀錄趨勢圖表</figcaption></figure></div>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：下一階單位概況"><div class="frame"><img src="../assets/img/factory-dashboard/7.webp" width="825" height="400" alt="下一階單位概況" loading="lazy"></div></button><figcaption>下一階單位概況</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：圖表和下一階概況顯示相同主題"><div class="frame"><img src="../assets/img/factory-dashboard/8.webp" width="825" height="400" alt="圖表和下一階概況顯示相同主題" loading="lazy"></div></button><figcaption>圖表和下一階概況顯示相同主題</figcaption></figure></div>
+<figure><button class="zoom" type="button" aria-label="放大檢視：切換主題時，上下內容一起變動。"><div class="frame"><img src="../assets/img/factory-dashboard/9.webp" width="825" height="400" alt="切換主題時，上下內容一起變動。" loading="lazy"></div></button><figcaption>切換主題時，上下內容一起變動。</figcaption></figure>
+<h3>操作流程設計</h3>
+<p>在目前頁面就能比較下一階單位的狀況，再往其中一個單位深入（Drilldown）。麵包屑清楚呈現目前所在的層級，也能直接跳回任何一層，不用一直按上一頁。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：User flow"><div class="frame"><img src="../assets/img/factory-dashboard/10.webp" width="825" height="400" alt="User flow" loading="lazy"></div></button><figcaption>User flow</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：同層項目比較"><div class="frame"><img src="../assets/img/factory-dashboard/11.webp" width="825" height="400" alt="同層項目比較" loading="lazy"></div></button><figcaption>同層項目比較</figcaption></figure></div>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：Drilldown 到下一階"><div class="frame"><img src="../assets/img/factory-dashboard/12.webp" width="825" height="400" alt="Drilldown 到下一階" loading="lazy"></div></button><figcaption>Drilldown 到下一階</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：各層級看板都能 Drilldown"><div class="frame"><img src="../assets/img/factory-dashboard/13.webp" width="825" height="579" alt="各層級看板都能 Drilldown" loading="lazy"></div></button><figcaption>各層級看板都能 Drilldown</figcaption></figure></div>
+<figure><button class="zoom" type="button" aria-label="放大檢視：用麵包屑切換層級。"><div class="frame"><img src="../assets/img/factory-dashboard/14.webp" width="825" height="400" alt="用麵包屑切換層級。" loading="lazy"></div></button><figcaption>用麵包屑切換層級。</figcaption></figure>
+<h3>後續優化：同層切換更快</h3>
+<p>原本的麵包屑很方便切換到不同層級，但在同一層之間切換，反而要經過較多步驟。把下拉選單融入麵包屑後，可以直接切換到同一層的其他項目。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：麵包屑優化後"><div class="frame"><img src="../assets/img/factory-dashboard/15.webp" width="825" height="400" alt="麵包屑優化後" loading="lazy"></div></button><figcaption>麵包屑優化後</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：優化後"><div class="frame"><img src="../assets/img/factory-dashboard/20.webp" width="825" height="510" alt="優化後" loading="lazy"></div></button><figcaption>優化後</figcaption></figure></div>
+<h3>Wireframe 與 UI</h3>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：Wireframe 總覽"><div class="frame"><img src="../assets/img/factory-dashboard/16.webp" width="1108" height="693" alt="Wireframe 總覽" loading="lazy"></div></button><figcaption>Wireframe 總覽</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：Wireframe 總覽"><div class="frame"><img src="../assets/img/factory-dashboard/17.webp" width="1108" height="426" alt="Wireframe 總覽" loading="lazy"></div></button><figcaption>Wireframe 總覽</figcaption></figure></div>
+<figure><button class="zoom" type="button" aria-label="放大檢視：UI 設計（個人額外製作）。"><div class="frame"><img src="../assets/img/factory-dashboard/19.webp" width="1100" height="612" alt="UI 設計（個人額外製作）。" loading="lazy"></div></button><figcaption>UI 設計（個人額外製作）。</figcaption></figure>
+</section><section id="result"><h2><span class="num">04</span>結果</h2>
+<div class="outcome plain"><div><p>用同一套版面結構，涵蓋廠區、大線別、小線別、站台四個層級。透過麵包屑和 Drilldown 隨時切換層級，不用再開好幾個分頁來比較。</p></div></div>
+<p class="todo">上線狀況與客戶回饋。</p>
+</section>
+        <a class="next-project" href="tristar.html"><span>下一個作品</span><b>福泰旅遊網站改版 →</b></a>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">© 2026 Joseph Wu</div>
+  </footer>
+  <script src="../assets/js/site.js" defer></script>
+</body>
+</html>
