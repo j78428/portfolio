@@ -241,6 +241,14 @@ def page(c):
 
     toc, secs = [], []
     for i, sec in enumerate(c["sections"]):
+        if c.get("free"):
+            # Older works: topics come from the original write-up, heading = topic
+            label, blocks = sec
+            sid = f"s{i + 1}"
+            toc.append(f'<li><a href="#{sid}">{label}</a></li>')
+            secs.append(f'<section id="{sid}"><h2 class="topic"><span class="num">{i + 1:02d}</span>{label}</h2>\n'
+                        f'{render(blocks, slug)}\n</section>')
+            continue
         _, headline, blocks = sec
         label, sid = SECTION_LABELS[i], SECTION_IDS[i]
         toc.append(f'<li><a href="#{sid}">{label}</a></li>')
@@ -255,7 +263,7 @@ def page(c):
         <a class="back" href="../#work"><span aria-hidden="true">←</span> 所有作品</a>
         <span class="eyebrow">{c["eyebrow"]}</span>
         <h1>{c["h1"]}</h1>
-        <p class="lead">{c["lead"]}</p>
+        {f'<p class="lead">{c["lead"]}</p>' if c.get("lead") else ""}
         <dl class="summary" style="--cols:{len(c["summary"])}">{summary}</dl>
         {cover_html}
       </header>

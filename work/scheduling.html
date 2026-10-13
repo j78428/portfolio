@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>智能排程系統｜Joseph Wu</title>
-  <meta name="description" content="智能排程系統：縮短生管人員安排生產計畫的時間，並在插單、停機時快速調整計畫。從需求了解到設計提案的過程。">
-  <meta property="og:title" content="智能排程系統：縮短排產時間，跟上產線的每一次變化">
-  <meta property="og:description" content="智能排程系統：縮短生管人員安排生產計畫的時間，並在插單、停機時快速調整計畫。從需求了解到設計提案的過程。">
+  <meta name="description" content="智能排程系統：縮短人工計畫時間，降低計畫異動成本。">
+  <meta property="og:title" content="智能排程系統：縮短人工計畫時間，降低計畫異動成本">
+  <meta property="og:description" content="智能排程系統：縮短人工計畫時間，降低計畫異動成本。">
   <meta property="og:image" content="../assets/img/scheduling/18.webp">
   <link rel="icon" href="../images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,54 +33,63 @@
       <header class="case-hero">
         <a class="back" href="../#work"><span aria-hidden="true">←</span> 所有作品</a>
         <span class="eyebrow">Synergies｜製造業 SaaS</span>
-        <h1>智能排程系統：縮短排產時間，跟上產線的每一次變化</h1>
-        <p class="lead">從 JarviX 延伸出的「智能排程」功能模組雛形。目標是縮短生管人員安排生產計畫的時間，並在插單、停機等狀況發生時，快速調整計畫。這篇說明從需求了解到設計提案的過程。</p>
-        <dl class="summary" style="--cols:4"><div><dt>角色</dt><dd>UI / UX Designer</dd></div><div><dt>負責內容</dt><dd>需求了解、資訊架構、操作流程<br>Wireframe</dd></div><div><dt>類型</dt><dd>UX・System</dd></div><div><dt>公司</dt><dd>Synergies<br>2019 – 2023</dd></div></dl>
-        <div class="case-cover"><figure style="margin:0"><button class="zoom" type="button" aria-label="放大檢視：智能排程系統 UI"><div class="frame"><img src="../assets/img/scheduling/18.webp" width="1600" height="890" alt="智能排程系統 UI" fetchpriority="high"></div></button><figcaption>智能排程系統 UI（個人額外製作）。</figcaption></figure></div>
+        <h1>智能排程系統：縮短人工計畫時間，降低計畫異動成本</h1>
+        
+        <dl class="summary" style="--cols:4"><div><dt>擔任角色</dt><dd>UI / UX Designer</dd></div><div><dt>負責內容</dt><dd>功能需求了解、討論解決辦法、資訊架構規劃<br>操作流程設計、Wireframe 繪製</dd></div><div><dt>類型</dt><dd>UX・System</dd></div><div><dt>公司</dt><dd>Synergies<br>2019 – 2023</dd></div></dl>
+        <div class="case-cover"><figure style="margin:0"><button class="zoom" type="button" aria-label="放大檢視：智能排程系統 UI"><div class="frame"><img src="../assets/img/scheduling/18.webp" width="1600" height="890" alt="智能排程系統 UI" fetchpriority="high"></div></button><figcaption>個人額外製作：UI 設計。</figcaption></figure></div>
       </header>
     </div>
     <div class="wrap case-layout">
-      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">背景與目標</a></li><li><a href="#challenge">挑戰</a></li><li><a href="#process">解法</a></li><li><a href="#result">成果</a></li></ol></nav>
+      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#s1">專案概述</a></li><li><a href="#s2">設計流程</a></li><li><a href="#s3">需求與架構</a></li><li><a href="#s4">Layout 規劃</a></li><li><a href="#s5">個人額外製作：UI 設計</a></li></ol></nav>
       <article class="prose">
-<section id="goal"><p class="sec-label"><span class="num">01</span>背景與目標</p><h2>縮短排產時間，跟上產線的每一次變化</h2>
-<p>縮短生管人員每次安排生產計畫所花的時間，大幅降低製作成本；同時要能跟上產線隨時的變化（例如插單、停機），調整當前的計畫。</p>
-</section><section id="challenge"><p class="sec-label"><span class="num">02</span>挑戰</p><h2>多廠區、計算耗時，還要和既有產品分工</h2>
-<ul><li>生管人員每次排產都要花大量時間，產線一有變化，就得重新調整計畫。</li><li>新功能和公司既有產品 JarviX 的關係要先釐清：誰負責資料管理、排程功能怎麼擴充。</li><li>系統要支援多個廠區，每個廠區的資料都不同。</li><li>排程模擬需要一定的計算時間。</li></ul>
-<figure><button class="zoom" type="button" aria-label="放大檢視：使用情境。"><div class="frame"><img src="../assets/img/scheduling/1.webp" width="1600" height="893" alt="使用情境。" loading="lazy"></div></button><figcaption>使用情境。</figcaption></figure>
-</section><section id="process"><p class="sec-label"><span class="num">03</span>解法</p><h2>從使用情境、流程，一路做到完整 Wireframe</h2>
+<section id="s1"><h2 class="topic"><span class="num">01</span>專案概述</h2>
+<p>此為主產品所延伸而出的「智能排程計畫」功能模組雛形，目的是縮短生管人員每次在安排生產計畫時所需要耗費的時間，大大降低製作成本，並且能夠跟上產線隨時的變化（例如：插單、停機），進行當前計畫的異動與調整。</p>
+<p>此篇主要說明從需求暸解到設計提案的過程，以及建立排產計畫的相關功能和操作流程。</p>
+</section><section id="s2"><h2 class="topic"><span class="num">02</span>設計流程</h2>
 <figure><button class="zoom" type="button" aria-label="放大檢視：設計流程。"><div class="frame"><img src="../assets/img/scheduling/20.webp" width="1600" height="280" alt="設計流程。" loading="lazy"></div></button><figcaption>設計流程。</figcaption></figure>
-<h3>整理功能需求</h3>
-<p>和專案經理一起討論、收斂客戶的需求，整理出基礎的功能清單。</p>
+</section><section id="s3"><h2 class="topic"><span class="num">03</span>需求與架構</h2>
+<h3>使用情境</h3>
+<figure><button class="zoom" type="button" aria-label="放大檢視：使用情境。"><div class="frame"><img src="../assets/img/scheduling/1.webp" width="1600" height="893" alt="使用情境。" loading="lazy"></div></button><figcaption>使用情境。</figcaption></figure>
+<h3>Function map 需求</h3>
+<p>與專案經理一起討論和收斂客戶而來的資訊，並匯出基礎的功能清單。</p>
 <figure><button class="zoom" type="button" aria-label="放大檢視：Function map。"><div class="frame"><img src="../assets/img/scheduling/3.webp" width="1600" height="929" alt="Function map。" loading="lazy"></div></button><figcaption>Function map。</figcaption></figure>
-<h3>規劃 Sitemap</h3>
-<p>釐清商業銷售需求，定義排產功能和產品的關係：以 JarviX 負責資料管理，生產排程則作為額外的擴充模組。</p>
+<h3>Sitemap 規劃</h3>
+<p>釐清商業銷售需求，定義新排產功能與產品的關係。討論結果預期以公司產品 JarviX 作為資料管理的角色，而生產排程功能則為產品額外的擴充模組。</p>
 <figure><button class="zoom" type="button" aria-label="放大檢視：Sitemap。"><div class="frame"><img src="../assets/img/scheduling/2.webp" width="1600" height="929" alt="Sitemap。" loading="lazy"></div></button><figcaption>Sitemap。</figcaption></figure>
-<h3>設計 User flow</h3>
-<p>梳理從預測生產需求到產出排程計畫的操作流程，以及中途發生歧異時的處理流程。</p>
+<h3>User flow 設計</h3>
+<p>梳理從生產需求的預測到排程計畫結果的操作流程，以及當中不同歧異點發生後的處理流程。</p>
 <figure><button class="zoom" type="button" aria-label="放大檢視：User flow。"><div class="frame"><img src="../assets/img/scheduling/4.webp" width="1600" height="929" alt="User flow。" loading="lazy"></div></button><figcaption>User flow。</figcaption></figure>
-<h3>版面規劃①：依廠區劃分資料</h3>
-<p>系統要支援不同廠區，每個廠區的資料也不同，所以進入主要功能前，先以廠區選單劃分。新增廠區時可以直接設定要串接的資料來源，每個廠區各自管理生產排程和相關設定。</p>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：廠區列表"><div class="frame"><img src="../assets/img/scheduling/5.webp" width="1600" height="776" alt="廠區列表" loading="lazy"></div></button><figcaption>廠區列表</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：建立新廠區"><div class="frame"><img src="../assets/img/scheduling/6.webp" width="1600" height="776" alt="建立新廠區" loading="lazy"></div></button><figcaption>建立新廠區</figcaption></figure></div>
-<figure><button class="zoom" type="button" aria-label="放大檢視：各廠區的資料獨立管理。"><div class="frame"><img src="../assets/img/scheduling/7.webp" width="1600" height="776" alt="各廠區的資料獨立管理。" loading="lazy"></div></button><figcaption>各廠區的資料獨立管理。</figcaption></figure>
-<h3>版面規劃②：模擬排產計畫</h3>
-<p>用步驟條引導，主要功能按鈕固定在上方。第一步是預測未來的生產需求：設定預測時間範圍、歷史資料參考範圍、品項限制等條件；使用者對預測結果有其他想法時，可以直接編輯品項、數量和交付日期。</p>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：步驟條引導"><div class="frame"><img src="../assets/img/scheduling/8.webp" width="1600" height="776" alt="步驟條引導" loading="lazy"></div></button><figcaption>步驟條引導</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：預測條件設定"><div class="frame"><img src="../assets/img/scheduling/9.webp" width="1600" height="776" alt="預測條件設定" loading="lazy"></div></button><figcaption>預測條件設定</figcaption></figure></div>
-<figure><button class="zoom" type="button" aria-label="放大檢視：編輯預測項目。"><div class="frame"><img src="../assets/img/scheduling/10.webp" width="1600" height="776" alt="編輯預測項目。" loading="lazy"></div></button><figcaption>編輯預測項目。</figcaption></figure>
-<div class="callout"><p>原本的 User flow 沒有「排程模擬設定」這一步。因為使用者希望能參與部分參數的調整，所以加入這個步驟。</p></div>
-<figure><button class="zoom" type="button" aria-label="放大檢視：排程模擬設定。"><div class="frame"><img src="../assets/img/scheduling/11.webp" width="1600" height="776" alt="排程模擬設定。" loading="lazy"></div></button><figcaption>排程模擬設定。</figcaption></figure>
-<p>排程模擬需要計算時間，為了提升效率，可以一次設定多組方案（最多 4 組）同時模擬。各方案的好壞以 KPI 差異判斷，右側圖表把方案放在一起比較，並凸顯目前正在看的方案，讓左右資訊互相對應。</p>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：多組模擬方案設定"><div class="frame"><img src="../assets/img/scheduling/12.webp" width="1600" height="776" alt="多組模擬方案設定" loading="lazy"></div></button><figcaption>多組模擬方案設定</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：排程結果方案比較"><div class="frame"><img src="../assets/img/scheduling/13.webp" width="1600" height="776" alt="排程結果方案比較" loading="lazy"></div></button><figcaption>排程結果方案比較</figcaption></figure></div>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：排產計畫"><div class="frame"><img src="../assets/img/scheduling/21.webp" width="1600" height="776" alt="排產計畫" loading="lazy"></div></button><figcaption>排產計畫</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：交付計畫"><div class="frame"><img src="../assets/img/scheduling/22.webp" width="1600" height="776" alt="交付計畫" loading="lazy"></div></button><figcaption>交付計畫</figcaption></figure></div>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：產線預計產能"><div class="frame"><img src="../assets/img/scheduling/23.webp" width="1600" height="776" alt="產線預計產能" loading="lazy"></div></button><figcaption>產線預計產能</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：採用目前計畫"><div class="frame"><img src="../assets/img/scheduling/19.webp" width="1600" height="776" alt="採用目前計畫" loading="lazy"></div></button><figcaption>採用目前計畫</figcaption></figure></div>
-<h3>版面規劃③：當前採用計畫</h3>
-<p>採用的計畫保留在「當前採用計畫」頁。甘特圖可以切換顯示維度（例如以週為單位）、hover 看更多資訊、切換精簡或詳細模式；產線有變化時可以重新模擬，過去的採用紀錄也能查閱。</p>
-<figure><button class="zoom" type="button" aria-label="放大檢視：當前採用計畫。"><div class="frame"><img src="../assets/img/scheduling/14.webp" width="1600" height="776" alt="當前採用計畫。" loading="lazy"></div></button><figcaption>當前採用計畫。</figcaption></figure>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：以週為單位顯示甘特圖"><div class="frame"><img src="../assets/img/scheduling/15.webp" width="1600" height="776" alt="以週為單位顯示甘特圖" loading="lazy"></div></button><figcaption>以週為單位顯示甘特圖</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：hover 顯示詳細資訊"><div class="frame"><img src="../assets/img/scheduling/16.webp" width="1600" height="776" alt="hover 顯示詳細資訊" loading="lazy"></div></button><figcaption>hover 顯示詳細資訊</figcaption></figure></div>
-<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：切換顯示模式"><div class="frame"><img src="../assets/img/scheduling/17.webp" width="1600" height="776" alt="切換顯示模式" loading="lazy"></div></button><figcaption>切換顯示模式</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：重新模擬"><div class="frame"><img src="../assets/img/scheduling/24.webp" width="1600" height="776" alt="重新模擬" loading="lazy"></div></button><figcaption>重新模擬</figcaption></figure></div>
-<figure><button class="zoom" type="button" aria-label="放大檢視：採用紀錄。"><div class="frame"><img src="../assets/img/scheduling/25.webp" width="1600" height="776" alt="採用紀錄。" loading="lazy"></div></button><figcaption>採用紀錄。</figcaption></figure>
-</section><section id="result"><p class="sec-label"><span class="num">04</span>成果</p><h2>完成智能排程模組的設計提案</h2>
-<div class="outcome plain"><div><p>完成「智能排程」功能模組的設計提案：使用情境、功能清單、Sitemap、User flow 與完整 Wireframe，另外也製作了 UI 設計。</p></div></div>
-<p class="todo">提案之後的發展（例如：是否開發上線、客戶的回饋）。</p>
+</section><section id="s4"><h2 class="topic"><span class="num">04</span>Layout 規劃</h2>
+<h3>1. 廠區資料劃分</h3>
+<p>由於系統會需要支援不同廠區，每個廠區的資料也不同，因此在進入主要系統功能之前，會以此選單作為劃分。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：產區列表，各產區資料劃分。"><div class="frame"><img src="../assets/img/scheduling/5.webp" width="1600" height="776" alt="產區列表，各產區資料劃分。" loading="lazy"></div></button><figcaption>產區列表，各產區資料劃分。</figcaption></figure>
+<p>新增廠區可以直接設定要串接的數據資料來源。每個廠區都可以管理各自的生產排程計畫和相關的生產設定。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：建立新廠區"><div class="frame"><img src="../assets/img/scheduling/6.webp" width="1600" height="776" alt="建立新廠區" loading="lazy"></div></button><figcaption>建立新廠區</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：產區資料皆各自獨立管理"><div class="frame"><img src="../assets/img/scheduling/7.webp" width="1600" height="776" alt="產區資料皆各自獨立管理" loading="lazy"></div></button><figcaption>產區資料皆各自獨立管理</figcaption></figure></div>
+<h3>2. 模擬排產計畫</h3>
+<p>步驟性引導設計，且將主要的功能按鈕安排在同樣上方的位置。排程計畫模擬的第一步驟需要先預測未來的生產需求。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：步驟條引導顯示。"><div class="frame"><img src="../assets/img/scheduling/8.webp" width="1600" height="776" alt="步驟條引導顯示。" loading="lazy"></div></button><figcaption>步驟條引導顯示。</figcaption></figure>
+<p>透過預測時間範圍、歷史資料參考範圍、品項限制等條件來進行生產需求的預測。若使用者對於預測結果有其他想法，可以透過編輯對生產品項、數量和交付日期項目進行調整。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：預測條件設定"><div class="frame"><img src="../assets/img/scheduling/9.webp" width="1600" height="776" alt="預測條件設定" loading="lazy"></div></button><figcaption>預測條件設定</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：編輯項目內容"><div class="frame"><img src="../assets/img/scheduling/10.webp" width="1600" height="776" alt="編輯項目內容" loading="lazy"></div></button><figcaption>編輯項目內容</figcaption></figure></div>
+<p>排程模擬設定主要是作為模擬條件使用。在原本的 User flow 中並沒有規劃此步驟，但由於使用者希望可以介入參與一些參數設定的調整，故將此步驟加入。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：排程模擬設定內容。"><div class="frame"><img src="../assets/img/scheduling/11.webp" width="1600" height="776" alt="排程模擬設定內容。" loading="lazy"></div></button><figcaption>排程模擬設定內容。</figcaption></figure>
+<p>排程模擬由於有一定的計算時間成本，為了提升模擬效率，在這邊也提供多組方案的設定功能（最多 4 組），讓使用者可以一次模擬多組方案。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：多組模擬方案設定。"><div class="frame"><img src="../assets/img/scheduling/12.webp" width="1600" height="776" alt="多組模擬方案設定。" loading="lazy"></div></button><figcaption>多組模擬方案設定。</figcaption></figure>
+<p>模擬後的排程結果，每組方案都有各自的詳細內容呈現。各方案結果之間的好壞主要以 KPI 差異做為判斷。右側圖表也會將方案放在一起作比較，並且著重凸顯當前正在瀏覽內容的方案，讓左右邊的資訊可以互相關聯。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：排程結果方案比較。"><div class="frame"><img src="../assets/img/scheduling/13.webp" width="1600" height="776" alt="排程結果方案比較。" loading="lazy"></div></button><figcaption>排程結果方案比較。</figcaption></figure>
+<p>排產計畫、交付計畫、產線預計產能可看到各種細部的排程資料。點擊「採用目前計畫」就可以保留目前內容作為最新採用版本。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：排產計畫內容"><div class="frame"><img src="../assets/img/scheduling/21.webp" width="1600" height="776" alt="排產計畫內容" loading="lazy"></div></button><figcaption>排產計畫內容</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：交付計畫內容"><div class="frame"><img src="../assets/img/scheduling/22.webp" width="1600" height="776" alt="交付計畫內容" loading="lazy"></div></button><figcaption>交付計畫內容</figcaption></figure></div>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：產線預計產能內容"><div class="frame"><img src="../assets/img/scheduling/23.webp" width="1600" height="776" alt="產線預計產能內容" loading="lazy"></div></button><figcaption>產線預計產能內容</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：採用計畫"><div class="frame"><img src="../assets/img/scheduling/19.webp" width="1600" height="776" alt="採用計畫" loading="lazy"></div></button><figcaption>採用計畫</figcaption></figure></div>
+<h3>3. 當前採用計畫</h3>
+<p>透過模擬採用的排程計畫，會以當前採用計畫頁面作為保留呈現。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：當前採用計畫頁面。"><div class="frame"><img src="../assets/img/scheduling/14.webp" width="1600" height="776" alt="當前採用計畫頁面。" loading="lazy"></div></button><figcaption>當前採用計畫頁面。</figcaption></figure>
+<p>排程計畫的顯示維度也可以進行切換（例如：以週為單位）。排程計畫的甘特圖項目，透過滑鼠 hover 可以看到更多的資訊。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：以週為單位顯示排程甘特圖"><div class="frame"><img src="../assets/img/scheduling/15.webp" width="1600" height="776" alt="以週為單位顯示排程甘特圖" loading="lazy"></div></button><figcaption>以週為單位顯示排程甘特圖</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：詳細資訊"><div class="frame"><img src="../assets/img/scheduling/16.webp" width="1600" height="776" alt="詳細資訊" loading="lazy"></div></button><figcaption>詳細資訊</figcaption></figure></div>
+<p>排程圖的內容很多，透過顯示模式的切換，可依照每位使用者當前瀏覽需求做顯示切換（例如：精簡、詳細）。重新模擬可以依照目前產線情況重新調整計畫內容。</p>
+<div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：變更顯示模式"><div class="frame"><img src="../assets/img/scheduling/17.webp" width="1600" height="776" alt="變更顯示模式" loading="lazy"></div></button><figcaption>變更顯示模式</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：重新模擬選項"><div class="frame"><img src="../assets/img/scheduling/24.webp" width="1600" height="776" alt="重新模擬選項" loading="lazy"></div></button><figcaption>重新模擬選項</figcaption></figure></div>
+<p>採用紀錄可以作為過去使用紀錄的查閱。</p>
+<figure><button class="zoom" type="button" aria-label="放大檢視：採用紀錄呈現。"><div class="frame"><img src="../assets/img/scheduling/25.webp" width="1600" height="776" alt="採用紀錄呈現。" loading="lazy"></div></button><figcaption>採用紀錄呈現。</figcaption></figure>
+</section><section id="s5"><h2 class="topic"><span class="num">05</span>個人額外製作：UI 設計</h2>
+<figure><button class="zoom" type="button" aria-label="放大檢視：UI 設計。"><div class="frame"><img src="../assets/img/scheduling/18.webp" width="1600" height="890" alt="UI 設計。" loading="lazy"></div></button><figcaption>UI 設計。</figcaption></figure>
 </section>
         <a class="next-project" href="factory-dashboard.html"><span>下一個作品</span><b>製造機台監控看板 →</b></a>
       </article>
