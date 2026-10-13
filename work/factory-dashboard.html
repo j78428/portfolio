@@ -40,13 +40,13 @@
       </header>
     </div>
     <div class="wrap case-layout">
-      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">目標</a></li><li><a href="#challenge">困難</a></li><li><a href="#process">過程</a></li><li><a href="#result">結果</a></li></ol></nav>
+      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">背景與目標</a></li><li><a href="#challenge">挑戰</a></li><li><a href="#process">解法</a></li><li><a href="#result">成果</a></li></ol></nav>
       <article class="prose">
-<section id="goal"><h2><span class="num">01</span>目標</h2>
+<section id="goal"><p class="sec-label"><span class="num">01</span>背景與目標</p><h2>一個看板，掌握各廠、各線的即時狀態</h2>
 <p>為電子製造業的 LED 封裝製程預測系統設計監控看板（系統另外包含製程參數最佳化、生產良率預測等功能），讓使用者在同一個看板上，掌握各廠、各線的即時狀態。</p>
-</section><section id="challenge"><h2><span class="num">02</span>困難</h2>
+</section><section id="challenge"><p class="sec-label"><span class="num">02</span>挑戰</p><h2>回不去上一層，圖表很多但頁面不能太長</h2>
 <ul class="cards"><li><span class="n">1</span><b>觀看維度要能彈性來回切換</b><span>客戶原本的看板可以從廠區往下看到大線別、小線別和站台，但要回上一層，只能從最上層重新點下來。要交叉比較時，只能開好幾個瀏覽器分頁切換。</span></li><li><span class="n">2</span><b>圖表很多，但頁面不能太長</b><span>除了稼動率、良率等重要 KPI 和下一階單位的運作資訊，還要看過去一段時間的 KPI 趨勢，又希望不用滾動太長就能看完。</span></li></ul>
-</section><section id="process"><h2><span class="num">03</span>過程</h2>
+</section><section id="process"><p class="sec-label"><span class="num">03</span>解法</p><h2>同一套版面結構，加上麵包屑自由切換層級</h2>
 <figure><button class="zoom" type="button" aria-label="放大檢視：設計流程。"><div class="frame"><img src="../assets/img/factory-dashboard/21.webp" width="1600" height="280" alt="設計流程。" loading="lazy"></div></button><figcaption>設計流程。</figcaption></figure>
 <h3>資訊架構規劃</h3>
 <p>看板要涵蓋四個層級，由大到小是：廠區、大產線別、小產線別、站台。從 Function Map 發現，雖然觀看維度不同，需要的資訊項目卻是一樣的。</p>
@@ -71,7 +71,7 @@
 <h3>Wireframe 與 UI</h3>
 <div class="fig-row" style="--n:2"><figure><button class="zoom" type="button" aria-label="放大檢視：Wireframe 總覽"><div class="frame"><img src="../assets/img/factory-dashboard/16.webp" width="1108" height="693" alt="Wireframe 總覽" loading="lazy"></div></button><figcaption>Wireframe 總覽</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：Wireframe 總覽"><div class="frame"><img src="../assets/img/factory-dashboard/17.webp" width="1108" height="426" alt="Wireframe 總覽" loading="lazy"></div></button><figcaption>Wireframe 總覽</figcaption></figure></div>
 <figure><button class="zoom" type="button" aria-label="放大檢視：UI 設計（個人額外製作）。"><div class="frame"><img src="../assets/img/factory-dashboard/19.webp" width="1100" height="612" alt="UI 設計（個人額外製作）。" loading="lazy"></div></button><figcaption>UI 設計（個人額外製作）。</figcaption></figure>
-</section><section id="result"><h2><span class="num">04</span>結果</h2>
+</section><section id="result"><p class="sec-label"><span class="num">04</span>成果</p><h2>四個層級，同一套結構看到底</h2>
 <div class="outcome plain"><div><p>用同一套版面結構，涵蓋廠區、大線別、小線別、站台四個層級。透過麵包屑和 Drilldown 隨時切換層級，不用再開好幾個分頁來比較。</p></div></div>
 <p class="todo">上線狀況與客戶回饋。</p>
 </section>

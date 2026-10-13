@@ -347,3 +347,8 @@ dialog.lightbox p { color: rgba(255, 255, 255, .85); font-size: 14px; text-align
 .tier-sub b { display: block; color: var(--navy-deep); font-size: 15px; margin-bottom: 8px; }
 .prose .tier-sub .chips li { background: #fff; }
 @media (max-width: 640px) { .tier-sub { grid-template-columns: 1fr; } }
+
+/* Section label (fixed wayfinding) + case-specific headline */
+.prose .sec-label { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--navy); margin: 0 0 10px; letter-spacing: .04em; }
+.prose .sec-label .num { font-size: 13px; font-weight: 700; color: var(--navy-deep); background: var(--yellow); border-radius: 7px; padding: 1px 8px; }
+.prose h2 { display: block; }

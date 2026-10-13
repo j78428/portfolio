@@ -225,7 +225,8 @@ FOOT = """
 </html>
 """
 
-SECTION_TITLES = ["目標", "困難", "過程", "結果"]
+SECTION_LABELS = ["背景與目標", "挑戰", "解法", "成果"]
+SECTION_IDS = ["goal", "challenge", "process", "result"]
 
 
 def page(c):
@@ -239,11 +240,12 @@ def page(c):
         cover_html = '<div class="case-cover">' + fig(cover, slug, eager=True).replace("<figure", "<figure style=\"margin:0\"", 1) + "</div>"
 
     toc, secs = [], []
-    for i, (key, blocks) in enumerate(c["sections"]):
-        title = SECTION_TITLES[i]
-        sid = ["goal", "challenge", "process", "result"][i]
-        toc.append(f'<li><a href="#{sid}">{title}</a></li>')
-        secs.append(f'<section id="{sid}"><h2><span class="num">0{i + 1}</span>{title}</h2>\n{render(blocks, slug)}\n</section>')
+    for i, sec in enumerate(c["sections"]):
+        _, headline, blocks = sec
+        label, sid = SECTION_LABELS[i], SECTION_IDS[i]
+        toc.append(f'<li><a href="#{sid}">{label}</a></li>')
+        secs.append(f'<section id="{sid}"><p class="sec-label"><span class="num">0{i + 1}</span>{label}</p>'
+                    f'<h2>{headline}</h2>\n{render(blocks, slug)}\n</section>')
 
     nxt = c["next"]
     body = f"""

@@ -40,13 +40,13 @@
       </header>
     </div>
     <div class="wrap case-layout">
-      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">目標</a></li><li><a href="#challenge">困難</a></li><li><a href="#process">過程</a></li><li><a href="#result">結果</a></li></ol></nav>
+      <nav class="toc" aria-label="本頁目錄"><p>目錄</p><ol><li><a href="#goal">背景與目標</a></li><li><a href="#challenge">挑戰</a></li><li><a href="#process">解法</a></li><li><a href="#result">成果</a></li></ol></nav>
       <article class="prose">
-<section id="goal"><h2><span class="num">01</span>目標</h2>
+<section id="goal"><p class="sec-label"><span class="num">01</span>背景與目標</p><h2>從自家系統，走向開放給更多園所的平台</h2>
 <p>好學原本的系統，只服務自家園所和部分園所。公司的商業策略轉向<strong>平台化</strong>，要讓托幼加開放給更多外部園所使用，所以決定從 1.0 大改版成 2.0。</p>
 <p>改版要讓系統管理員、校方、老師、醫護人員和家長打開系統時，都只看到自己需要的內容，用起來更直覺、更省力。</p>
 <ul class="cards three"><li><span class="n">1</span><b>依角色拆分介面與權限</b><span>每個角色只看到、只能操作跟自己有關的內容。</span></li><li><span class="n">2</span><b>讓管理者處理校務更省力</b><span>特別是每學期的換班、調人。</span></li><li><span class="n">3</span><b>手機上第一眼就看到重點</b><span>老師和家長打開小程序，首屏就是最重要的資訊。</span></li></ul>
-</section><section id="challenge"><h2><span class="num">02</span>困難</h2>
+</section><section id="challenge"><p class="sec-label"><span class="num">02</span>挑戰</p><h2>角色多、邊界模糊，功能一路往上疊</h2>
 <p>托幼加的使用者分好幾層，每一層要做的事完全不同：</p>
 <ul class="cards"><li><b>系統管理員</b><span>管理整個平台、機構與帳號權限</span></li><li><b>校方管理者</b><span>管理老師、課程、教室等學校事務</span></li><li><b>老師</b><span>記錄學生的保育、保健與每天的工作</span></li><li><b>家長</b><span>查看孩子在學校的紀錄，和學校聯繫</span></li></ul>
 <p>在中國的托育機構，教職員又細分成<strong>保育人員、教學人員、醫護人員</strong>，各自負責不同的事。</p>
@@ -55,7 +55,7 @@
 <p>1.0 是兩三年前早期團隊做的，當時缺少系統架構和資訊架構的討論。我自己用的時候也常踩坑，常想：為什麼這個介面會一直讓人出錯？</p>
 <ul><li>功能分類、各角色的分層功能、各角色該看到的介面都很混亂。新功能一出來就往上疊，系統越來越難學、難用。</li><li>資料同步容易出錯：改了 A，以為 B、C 會跟著更新，其實得自己記得一個個去改，不然系統就會出現錯誤。</li><li>管理的維度很複雜：自家園所、非自家園所，還有集團本身，這些角色在舊系統裡都定義得很模糊。</li><li>大家打開系統看到的東西太多太雜，還會看到不該看的內容；有些介面的呈現和用法，也不適合實際的使用情境。</li><li>每學期的換班、調人，管理者要花很多力氣。</li><li>好學有自己的教案和教材，要能授權給各校，再讓各校自由排課。</li></ul>
 <figure><button class="zoom" type="button" aria-label="放大檢視：托幼加 1.0 保育紀錄畫面"><div class="frame"><img src="../assets/img/tuoyoujia/care-v1.webp" width="1920" height="1035" alt="托幼加 1.0 保育紀錄畫面" loading="lazy"></div></button><figcaption>1.0 的保育紀錄畫面。截圖中的幼兒個資已做模糊處理。</figcaption></figure>
-</section><section id="process"><h2><span class="num">03</span>過程</h2>
+</section><section id="process"><p class="sec-label"><span class="num">03</span>解法</p><h2>先定角色與邊界，再替每個角色設計介面</h2>
 <h3>我的角色與合作方式</h3>
 <p>我是團隊唯一的設計師。我和 PM 在台灣負責規劃，工程團隊在中國負責開發。</p>
 <ul class="cards three"><li><b>和 PM 一起規劃</b><span>梳理既有功能、訪談使用者，定出功能分類、資訊架構，以及角色的定位、分層與邊界。</span></li><li><b>跨海和工程溝通</b><span>透過會議和設計文件上的註解，說明每個畫面想呈現的方式。</span></li><li><b>全部的介面設計</b><span>管理後台 Web、老師端與家長端小程序。</span></li></ul>
@@ -81,11 +81,11 @@
 <h3>每學期換班、調人，不再費力</h3>
 <p>Web 管理後台主要給管理者使用，負責校務、行事曆等工作。最花力氣的是每學期的換班、調人，所以學生列表設計了批次處理與篩選，勾選一批學生就能一次變更。</p>
 <figure><button class="zoom" type="button" aria-label="放大檢視：學生列表批次處理"><div class="frame"><img src="../assets/img/tuoyoujia/batch.webp" width="1920" height="1080" alt="學生列表批次處理" loading="lazy"></div></button><figcaption>學生列表的批次處理：勾選多位學生後一次變更（例如變更為畢業）。</figcaption></figure>
-<h3>小程序與教室觸控大屏</h3>
-<p>小程序是這次改動最大的部分。老師和家長打開第一屏就看到最重要的資訊，常用功能則集中到常用工作列。網頁版也會放到教室的大型觸控螢幕上，讓老師直接在大屏上做保育和教學紀錄。</p>
+<h3>小程序：老師端與家長端</h3>
+<p>小程序是這次改動最大的部分。老師和家長打開第一屏就看到最重要的資訊，常用功能則集中到常用工作列。</p>
 <div class="phones"><figure><button class="zoom" type="button" aria-label="放大檢視：老師端小程序主頁"><div class="frame"><img src="../assets/img/tuoyoujia/app-teacher-new.webp" width="750" height="1624" alt="老師端小程序主頁" loading="lazy"></div></button><figcaption>老師端：今日班級概況與待辦</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：家長端小程序主頁"><div class="frame"><img src="../assets/img/tuoyoujia/app-parent.webp" width="750" height="1624" alt="家長端小程序主頁" loading="lazy"></div></button><figcaption>家長端：寶寶今日保育總結</figcaption></figure></div>
-<div class="next-grid"><a class="next-card" href="tuoyoujia-app.html"><b>看小程序與觸控大屏的設計 →</b><span>延伸案例</span></a></div>
-</section><section id="result"><h2><span class="num">04</span>結果</h2>
+<div class="next-grid"><a class="next-card" href="tuoyoujia-app.html"><b>看老師端與家長端的設計 →</b><span>延伸案例</span></a></div>
+</section><section id="result"><p class="sec-label"><span class="num">04</span>成果</p><h2>約 40 間園所上線，找不到功能的狀況明顯變少</h2>
 <div class="outcome"><div class="big">40<small>間</small></div><div><p><strong>2.0 已上線，約 40 間托育機構在使用。</strong>從使用者的問題回饋和老師的反應來看：</p>
 <ul><li>找不到資訊、不知道該點哪裡、該按什麼的狀況，明顯變少了</li><li>資訊變得簡單明瞭</li><li>權限分清楚了，不會看到不該看的內容</li><li>介面的呈現和用法，更符合實際的使用情境</li></ul></div></div>
 <h3>怎麼上線</h3>
@@ -100,9 +100,9 @@
 <p>同樣是記錄學生的保育狀況。拖曳中間的把手，比較 1.0 和 2.0：</p>
 <div class="compare" style="--pos:50%"><img src="../assets/img/tuoyoujia/care-v2.webp" width="1920" height="1080" alt="2.0 每日保育：以時間軸呈現全班" loading="lazy"><div class="before"><img src="../assets/img/tuoyoujia/care-v1.webp" width="1920" height="1035" alt="1.0 保育紀錄：以表格逐一查看單一學生" loading="lazy"></div><div class="handle" aria-hidden="true"></div><span class="label l">1.0</span><span class="label r">2.0</span><input type="range" min="0" max="100" value="50" aria-label="拖曳比較1.0與2.0"></div><figcaption>左：1.0 以表格逐一查看單一學生的紀錄；右：2.0 用時間軸一次呈現全班。1.0 截圖中的幼兒個資已做模糊處理。</figcaption>
 <h3>延伸閱讀</h3>
-<div class="next-grid"><a class="next-card" href="tuoyoujia-app.html"><b>托幼加小程序與觸控大屏</b><span>老師端、家長端的首屏設計</span></a></div>
+<div class="next-grid"><a class="next-card" href="tuoyoujia-app.html"><b>托幼加小程序：老師端與家長端</b><span>首屏設計，以及家長和老師之間的串連</span></a></div>
 </section>
-        <a class="next-project" href="tuoyoujia-app.html"><span>下一個作品</span><b>托幼加小程序與觸控大屏 →</b></a>
+        <a class="next-project" href="tuoyoujia-app.html"><span>下一個作品</span><b>托幼加小程序：老師端與家長端 →</b></a>
       </article>
     </div>
   </main>
