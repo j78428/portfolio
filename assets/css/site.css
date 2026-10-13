@@ -354,3 +354,25 @@ dialog.lightbox img { max-width: 96vw; width: auto; border-radius: 10px; }
 dialog.lightbox.fit img { max-height: 88vh; }
 dialog.lightbox button { position: fixed; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--yellow); color: var(--on-yellow); font-size: 22px; font-weight: 800; cursor: pointer; z-index: 2; }
 dialog.lightbox p { color: var(--text-2); font-size: 14px; text-align: center; margin: 10px 0 0; }
+
+/* Process flow steps (HTML version of the old flow images) */
+.steps { list-style: none; margin: 24px 0; padding: 0 !important; display: grid; grid-template-columns: repeat(var(--n, 4), 1fr); background: var(--surface); border-radius: var(--radius-lg); counter-reset: none; }
+.prose .steps li { position: relative; margin: 0; max-width: none; padding: 26px 24px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.prose .steps li:first-child { border-left: 0; }
+.prose .steps li::marker { content: none; }
+.steps li:not(:last-child)::after { content: "→"; position: absolute; right: -11px; top: 28px; width: 22px; height: 22px; border-radius: 50%; background: var(--surface-2); color: var(--yellow); font-size: 12px; display: grid; place-items: center; z-index: 1; }
+.step-no { font-size: 14px; font-weight: 800; color: var(--yellow); letter-spacing: .04em; }
+.steps b { font-size: 17px; color: var(--text); line-height: 1.4; }
+.steps li > span:last-child { font-size: 14.5px; color: var(--text-2); line-height: 1.6; }
+@media (max-width: 900px) {
+  .steps { grid-template-columns: 1fr 1fr; }
+  .prose .steps li:nth-child(3) { border-left: 0; }
+  .prose .steps li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .steps li:nth-child(2)::after { display: none; }
+}
+@media (max-width: 520px) {
+  .steps { grid-template-columns: 1fr; }
+  .prose .steps li { border-left: 0; border-top: 1px solid var(--line); }
+  .prose .steps li:first-child { border-top: 0; }
+  .steps li:not(:last-child)::after { right: auto; left: 24px; top: auto; bottom: -11px; content: "↓"; display: grid; }
+}

@@ -14,6 +14,18 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import CASES  # noqa: E402
 
 IMG = os.path.join(ROOT, "assets", "img")
+
+
+def _asset_version():
+    import hashlib
+    h = hashlib.md5()
+    for f in ("assets/css/site.css", "assets/js/site.js"):
+        with open(os.path.join(ROOT, f), "rb") as fh:
+            h.update(fh.read())
+    return h.hexdigest()[:8]
+
+
+ASSET_V = _asset_version()
 PENDING = []  # Figma frames still waiting for a high-res export
 _dims = {}
 
@@ -121,6 +133,11 @@ def render(blocks, slug):
                     f'<div class="ba-bf">{fig(bfig, slug)}</div><div class="ba-af">{fig(afig, slug)}</div>'
                     f'</div>{more}</div>')
             out.append('<div class="ba">' + "".join(rows) + "</div>")
+        elif kind == "steps":
+            # Numbered process flow drawn in HTML (replaces the old flow images)
+            items = "".join(f'<li><span class="step-no">{i:02d}</span><b>{t}</b><span>{d}</span></li>'
+                            for i, (t, d) in enumerate(b[1], 1))
+            out.append(f'<ol class="steps" style="--n:{len(b[1])}">{items}</ol>')
         elif kind == "tiers":
             # Layered sitemap drawn in HTML: one card per tier, optional sub-apps.
             cards = []
@@ -200,7 +217,7 @@ HEAD = """<!doctype html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/site.css?v={v}">
 </head>
 <body>
   <a class="skip" href="#main">跳到主要內容</a>
@@ -223,7 +240,7 @@ FOOT = """
     <div class="wrap">© 2026 Joseph Wu</div>
   </footer>
   <a class="to-top" href="#main" aria-label="回到頂端">↑</a>
-  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/site.js?v={v}" defer></script>
 </body>
 </html>
 """
@@ -280,9 +297,9 @@ def page(c):
     </div>
   </main>"""
     og = c.get("og") or (cover or {}).get("src", "tuoyoujia/dash-admin.webp")
-    head = HEAD.format(title=esc(c["title"]), desc=esc(c["desc"]), h1=esc(strip(c["h1"])), og=og)
+    head = HEAD.format(title=esc(c["title"]), desc=esc(c["desc"]), h1=esc(strip(c["h1"])), og=og, v=ASSET_V)
     with open(os.path.join(ROOT, "work", f"{slug}.html"), "w", encoding="utf-8") as fh:
-        fh.write(head + body + FOOT)
+        fh.write(head + body + FOOT.replace("{v}", ASSET_V))
 
 
 if __name__ == "__main__":
@@ -292,4 +309,11 @@ if __name__ == "__main__":
         print("built work/%s.html" % c["slug"])
     with open(os.path.join(ROOT, "_tools", "figma-pending.json"), "w", encoding="utf-8") as fh:
         json.dump(PENDING, fh, ensure_ascii=False, indent=1)
+    import re
+    idx = os.path.join(ROOT, "index.html")
+    with open(idx, encoding="utf-8") as fh:
+        html_ = fh.read()
+    html_ = re.sub(r'assets/(css/site\.css|js/site\.js)(\?v=\w+)?', lambda m: f"assets/{m.group(1)}?v={ASSET_V}", html_)
+    with open(idx, "w", encoding="utf-8") as fh:
+        fh.write(html_)
     print("%d Figma frames waiting for export -> _tools/figma-pending.json" % len(PENDING))
