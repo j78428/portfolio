@@ -121,6 +121,22 @@ def render(blocks, slug):
                     f'<div class="ba-bf">{fig(bfig, slug)}</div><div class="ba-af">{fig(afig, slug)}</div>'
                     f'</div>{more}</div>')
             out.append('<div class="ba">' + "".join(rows) + "</div>")
+        elif kind == "tiers":
+            # Layered sitemap drawn in HTML: one card per tier, optional sub-apps.
+            cards = []
+            for t in b[1]:
+                chips = "".join(f"<li>{c}</li>" for c in t["chips"])
+                sub = ""
+                if t.get("sub"):
+                    sub = '<div class="tier-sub">' + "".join(
+                        f'<div><b>{st}</b><ul class="chips">{"".join(f"<li>{c}</li>" for c in sc)}</ul></div>'
+                        for st, sc in t["sub"]) + "</div>"
+                cls = "tier main" if t.get("main") else "tier"
+                cards.append(f'<div class="{cls}"><div class="tier-head"><span class="tier-n">{t["n"]}</span>'
+                             f'<b>{t["title"]}</b><span class="tier-who">{t["who"]}</span></div>'
+                             f'<p>{t["desc"]}</p><ul class="chips">{chips}</ul>{sub}</div>')
+            cap = f"<figcaption>{b[2]}</figcaption>" if len(b) > 2 else ""
+            out.append(f'<figure class="tiers-fig"><div class="tiers">{"".join(cards)}</div>{cap}</figure>')
         elif kind == "tabs":
             tabs, panels = [], []
             for i, t in enumerate(b[1]):

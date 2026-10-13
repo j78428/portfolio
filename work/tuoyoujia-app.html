@@ -46,28 +46,26 @@
 <p>不管是老師或家長，打開小程序的第一屏就看到最重要的資訊，再把常用功能集中到常用工作列。</p>
 <p>另外，網頁版會放到教室的大型觸控螢幕上。目標是讓介面在大屏上也好點、好操作，老師可以直接在上面做保育和教學紀錄。</p>
 </section><section id="challenge"><h2><span class="num">02</span>困難</h2>
-<p>舊版的老師端、家長端 App，在設計檔中都被標為「須重新規劃」。</p>
-<div class="phones"><figure data-figma="5440:24620"><button class="zoom" type="button" aria-label="放大檢視：舊版老師端小程序首頁"><div class="frame"><span class="badge-export">預覽圖・待匯出高解析</span><img src="../assets/img/tuoyoujia/app-teacher.webp" width="375" height="812" alt="舊版老師端小程序首頁" loading="lazy"></div></button><figcaption>舊版老師端首頁（須重新規劃）</figcaption></figure></div>
 <ul><li>老師一天要處理出勤、保育、托藥、家長交辦等許多工作，手機上要能快速找到今天該做的事。</li><li>家長最關心的是孩子今天過得好不好，還有要交辦給學校的事。</li><li>網頁介面原本是為滑鼠操作設計的，放到教室大屏上，要能直接用手指點選操作。</li></ul>
 <p class="todo">舊版 App 實際遇到的問題（例如：老師找不到功能、家長看不到重點、使用者的抱怨）。</p>
 </section><section id="process"><h2><span class="num">03</span>過程</h2>
 <h3>依「使用頻率 × 重要度」決定畫面放什麼</h3>
 <p>先把老師端的功能依「使用頻率高／低」和「每日重要度高／低」分類，再決定哪些放在首屏、哪些放進常用工作列或「更多」。</p>
-<figure data-figma="8355:102128"><div class="frame placeholder" style="--ar:5435 / 1941"><span class="tag">待匯出</span><b>老師端功能分類：使用頻率 × 每日重要度</b><span>Figma 節點 8355:102128</span></div><figcaption>依使用頻率與重要度分類功能。</figcaption></figure>
+<figure><button class="zoom" type="button" aria-label="放大檢視：老師端功能分類矩陣與架構"><div class="frame"><img src="../assets/img/tuoyoujia/app-priority.webp" width="2000" height="714" alt="老師端功能分類矩陣與架構" loading="lazy"></div></button><figcaption>左：老師端功能依「使用頻率 × 每日重要度」分類；右：依分類結果整理出的老師端架構。</figcaption></figure>
 <h3>老師端：今日班級概況與待辦</h3>
 <p>首屏是「今日班級概況」：到校人數、請假人數、家長交辦、托藥交辦、課程活動數、教具預備數。下面接著「我的待辦任務」和「我的待審核項目」（寶寶日報、寶寶月報、成長故事）。</p>
-<div class="phones"><figure data-figma="8355:88545"><div class="frame placeholder" style="--ar:375 / 812"><span class="tag">待匯出</span><b>老師端主頁（新版）</b><span>Figma 節點 8355:88545</span></div><figcaption>老師端主頁</figcaption></figure></div>
+<div class="phones"><figure><button class="zoom" type="button" aria-label="放大檢視：老師端小程序主頁完整頁面"><div class="frame"><img src="../assets/img/tuoyoujia/app-teacher-full.webp" width="723" height="2000" alt="老師端小程序主頁完整頁面" loading="lazy"></div></button><figcaption>老師端主頁（完整頁面）</figcaption></figure></div>
 <h3>家長端：寶寶今天過得好不好，一眼看到</h3>
 <p>首屏是寶寶的「今日保育總結」：平均體溫、喝奶量、飲食餐數、飲水量、大小便次數、睡眠時數、安全事故。下面是四個常用交辦：家長交辦、寶寶請假、托藥交辦、放學預約，再往下是校園訊息、每月報告和成長故事。</p>
-<div class="phones"><figure data-figma="9262:94649"><button class="zoom" type="button" aria-label="放大檢視：家長端小程序主頁"><div class="frame"><span class="badge-export">預覽圖・待匯出高解析</span><img src="../assets/img/tuoyoujia/app-parent.webp" width="375" height="812" alt="家長端小程序主頁" loading="lazy"></div></button><figcaption>家長端主頁</figcaption></figure></div>
+<div class="phones"><figure><button class="zoom" type="button" aria-label="放大檢視：家長端小程序主頁"><div class="frame"><img src="../assets/img/tuoyoujia/app-parent.webp" width="750" height="1624" alt="家長端小程序主頁" loading="lazy"></div></button><figcaption>家長端主頁</figcaption></figure></div>
 <h3>常用工作列</h3>
 <p>最常用的功能固定在底部工作列：老師端是「主頁、作息紀錄、訊息、更多」，家長端是「主頁、寶寶作息、寶寶日報、訊息、我的」。</p>
 <h3>寶寶日報與家長留言</h3>
 <p>老師記錄寶寶一天的進食、睡眠、活動參與和排便狀況，加上觀察建議、給家長的話和叮嚀；家長可以直接在日報下留言，老師再回覆。</p>
-<div class="phones"><figure data-figma="8464:9194"><div class="frame placeholder" style="--ar:375 / 812"><span class="tag">待匯出</span><b>寶寶日報詳情</b><span>Figma 節點 8464:9194</span></div><figcaption>寶寶日報</figcaption></figure></div>
+<div class="phones"><figure><button class="zoom" type="button" aria-label="放大檢視：寶寶日報詳情上半部"><div class="frame"><img src="../assets/img/tuoyoujia/app-report-1.webp" width="750" height="1624" alt="寶寶日報詳情上半部" loading="lazy"></div></button><figcaption>日報：進食與睡眠</figcaption></figure><figure><button class="zoom" type="button" aria-label="放大檢視：寶寶日報詳情下半部"><div class="frame"><img src="../assets/img/tuoyoujia/app-report-2.webp" width="750" height="1624" alt="寶寶日報詳情下半部" loading="lazy"></div></button><figcaption>日報：給家長的話與老師叮嚀</figcaption></figure></div>
 <h3>發布動態，可以設定誰看得到</h3>
 <p>老師發布動態時，可以選擇瀏覽權限：全校、自訂班級，或自訂學生。</p>
-<figure data-figma="8428:99009"><div class="frame placeholder" style="--ar:720 / 364"><span class="tag">待匯出</span><b>動態瀏覽權限設定</b><span>Figma 節點 8428:99009</span></div><figcaption>瀏覽權限：全校／自訂班級／自訂學生。</figcaption></figure>
+<figure><button class="zoom" type="button" aria-label="放大檢視：動態瀏覽權限設定"><div class="frame"><img src="../assets/img/tuoyoujia/app-permission.webp" width="1440" height="728" alt="動態瀏覽權限設定" loading="lazy"></div></button><figcaption>瀏覽權限：全校／自訂班級／自訂學生。</figcaption></figure>
 <h3>教室觸控大屏</h3>
 <figure data-figma="（待提供）"><div class="frame placeholder" style="--ar:16 / 9"><span class="tag">待匯出</span><b>教室觸控大屏畫面</b><span>Figma 節點 （待提供）</span></div><figcaption>老師在大屏上做保育與教學紀錄。</figcaption></figure>
 <p class="todo">大屏的設計細節：點擊區域怎麼調整、哪些畫面會放到大屏、老師實際怎麼使用。</p>
