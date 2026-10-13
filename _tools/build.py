@@ -229,7 +229,7 @@ HEAD = """<!doctype html>
         <a href="../#process">工作方式</a>
         <a href="../#experience">經歷</a>
         <a href="../#contact">聯絡</a>
-        <a class="btn-pill" href="https://joserenfu.com/joseph_resume" target="_blank" rel="noopener">下載履歷</a>
+        <a class="btn-pill" href="../assets/Joseph-Wu-Resume-ZH.pdf" download>下載履歷</a>
       </nav>
     </div>
   </header>
