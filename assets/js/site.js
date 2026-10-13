@@ -3,7 +3,11 @@
   // Header border once the page scrolls
   const header = document.querySelector('.site-header');
   if (header) {
-    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    const toTop = document.querySelector('.to-top');
+    const onScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 8);
+      if (toTop) toTop.classList.toggle('show', window.scrollY > 700);
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }

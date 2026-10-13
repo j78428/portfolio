@@ -8,10 +8,11 @@
   <meta property="og:title" content="Joseph Wu｜UI / UX Designer">
   <meta property="og:description" content="把複雜的系統，整理成好用的產品。">
   <meta property="og:image" content="assets/img/tuoyoujia/cover-hero.webp">
+  <meta name="theme-color" content="#0b1122">
   <link rel="icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
@@ -22,6 +23,7 @@
       <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">J</span>Joseph Wu</a>
       <nav class="nav" aria-label="主選單">
         <a href="#work">作品</a>
+        <a href="#process">工作方式</a>
         <a href="#experience">經歷</a>
         <a href="#contact">聯絡</a>
         <a class="btn-pill" href="https://joserenfu.com/joseph_resume" target="_blank" rel="noopener">下載履歷</a>
@@ -31,29 +33,46 @@
 
   <main id="main">
     <section class="hero">
-      <div class="wrap">
-        <span class="eyebrow">Joseph Wu｜UI / UX Designer</span>
-        <h1>把複雜的系統，<br><span class="mark">整理成好用的產品。</span></h1>
-        <p class="lead">10 年以上 UI / UX 設計經驗，專注 B2B SaaS 與企業管理系統。擅長拆解繁雜的需求、理清資訊架構，做過數據分析、製造業、IoT、教育、旅遊、金融等領域的產品。</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">看作品 <span aria-hidden="true">↓</span></a>
-          <a class="btn" href="#contact">聯絡我</a>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hello">HELLO，我是</p>
+          <h1>Joseph Wu</h1>
+          <p class="role">UI / UX DESIGNER ・ B2B SAAS</p>
+          <p class="lead"><b>把複雜的系統，<span class="mark">整理成好用的產品。</span></b>10 年以上 UI / UX 設計經驗，專注 B2B SaaS 與企業管理系統。擅長拆解繁雜的需求、理清資訊架構，做過數據分析、製造業、IoT、教育、旅遊、金融等領域的產品。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">看作品 <span aria-hidden="true">↓</span></a>
+            <a class="btn" href="#contact">聯絡我</a>
+          </div>
+          <ul class="social" aria-label="社群連結">
+            <li><a href="mailto:j78428@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.4 7H4v.6l8 5.4 8-5.4V7h-.4L12 12.2z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/joseph-wu-9026b375/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+            <li><a href="https://www.behance.net/j78428" target="_blank" rel="noopener" aria-label="Behance">Bē</a></li>
+          </ul>
         </div>
-        <div class="hero-facts">
-          <div><strong>10+ 年</strong><span>UI / UX 設計經驗</span></div>
-          <div><strong>40 間</strong><span>托育機構使用托幼加</span></div>
-          <div><strong>B2B SaaS</strong><span>企業系統、WebAPP、小程序</span></div>
+        <div class="hero-photo">
+          <img src="assets/img/home/profile.webp" width="1052" height="1400" alt="Joseph Wu 的照片" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="stats">
+        <div><strong>10<small>+ 年</small></strong><span>UI / UX 設計經驗</span></div>
+        <div><strong>40<small>間</small></strong><span>托育機構使用托幼加</span></div>
+        <div><strong>2–3<small>人</small></strong><span>曾帶領的設計團隊</span></div>
+        <div><strong>8<small>個</small></strong><span>完整作品案例</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="work-title">精選作品</h2></div>
+        <div class="section-head" data-ghost="WORK">
+          <div><span class="sec-no">01.</span><h2 id="work-title">精選作品</h2></div>
+        </div>
 
         <div class="featured">
           <a class="card" href="work/tuoyoujia.html">
-            <div class="card-media"><img style="object-position:center" src="assets/img/tuoyoujia/cover-hero.webp" width="2400" height="1350" alt="托幼加管理後台與老師端、家長端小程序"></div>
+            <div class="card-media"><img style="object-position:center" src="assets/img/tuoyoujia/cover-hero.webp" width="2400" height="1350" alt="托幼加管理後台與老師端、家長端小程序" loading="lazy"></div>
             <div class="card-body">
               <span class="eyebrow">好學教育｜2023 – 2026</span>
               <h3>托幼加：讓 40 間托育機構的每個角色，只看到自己需要的</h3>
@@ -67,8 +86,8 @@
             <div class="card-media"><img src="assets/img/home/jarvix-ux.webp" width="1200" height="875" alt="JarviX 智能分析平台畫面" loading="lazy"></div>
             <div class="card-body">
               <span class="eyebrow">Synergies｜2019 – 2023</span>
-              <h3>JarviX 使用體驗優化：降低智能分析的上手門檻</h3>
-              <p>用自然語言問句產生圖表的數據分析平台。從問卷與訪談找出問題，重新規劃架構、引導和操作流程，讓分析新手也能上手。</p>
+              <h3>JarviX 使用體驗優化：降低智能分析上手門檻，讓數據分析更上手</h3>
+              <p>智能分析功能的使用率偏低。透過問卷與使用者訪談找出痛點，從架構層級、新手引導、分析推薦到操作便捷度全面優化。</p>
               <ul class="tags"><li>UX</li><li>SaaS</li><li>數據分析</li></ul>
               <span class="card-more">看案例 <span class="arrow" aria-hidden="true">→</span></span>
             </div>
@@ -78,8 +97,8 @@
             <div class="card-media"><img src="assets/img/jarvix-redesign/52.webp" width="1600" height="1999" alt="JarviX 改版後的 UI 總覽" loading="lazy"></div>
             <div class="card-body">
               <span class="eyebrow">Synergies｜2019 – 2023</span>
-              <h3>JarviX 介面改版：重構 Design System，讓介面跟得上產品成長</h3>
-              <p>產品快速迭代後介面開始不一致、難以擴充。重新盤點資訊架構、重構 Design System，進行全盤 UI 改版。</p>
+              <h3>JarviX 介面改版：介面除舊佈新，提升可管理性</h3>
+              <p>重新盤點統整網站資訊架構，透過 Design System 提升 UI 的一致性，並提升頁面佈局的擴充性、適切度。</p>
               <ul class="tags"><li>UI</li><li>Design System</li><li>SaaS</li></ul>
               <span class="card-more">看案例 <span class="arrow" aria-hidden="true">→</span></span>
             </div>
@@ -89,43 +108,52 @@
         <p class="subhead">更多作品</p>
         <ul class="work-list">
           <li><a href="work/tuoyoujia-app.html">
-            <span class="thumb"><img src="assets/img/tuoyoujia/app-parent.webp" width="375" height="812" alt="" loading="lazy"></span>
-            <span><h3>托幼加小程序：老師端與家長端</h3><p>打開第一屏，就看到今天最重要的事</p></span>
-            <span class="meta">好學教育</span>
+            <span class="thumb"><img src="assets/img/tuoyoujia/app-parent.webp" width="750" height="1624" alt="" loading="lazy"></span>
+            <span><span class="meta">好學教育</span><h3>托幼加小程序：老師端與家長端</h3><p>打開第一屏，就看到今天最重要的事</p></span>
           </a></li>
           <li><a href="work/scheduling.html">
             <span class="thumb"><img src="assets/img/home/cover9.webp" width="800" height="584" alt="" loading="lazy"></span>
-            <span><h3>智能排程系統</h3><p>縮短排產時間，跟上產線的每一次變化</p></span>
-            <span class="meta">Synergies</span>
+            <span><span class="meta">Synergies</span><h3>智能排程系統</h3><p>縮短人工計畫時間，降低計畫異動成本</p></span>
           </a></li>
           <li><a href="work/factory-dashboard.html">
             <span class="thumb"><img src="assets/img/home/cover4.webp" width="800" height="584" alt="" loading="lazy"></span>
-            <span><h3>製造機台監控看板</h3><p>從廠區到站台，一頁掌握、隨時切換</p></span>
-            <span class="meta">Synergies</span>
+            <span><span class="meta">Synergies</span><h3>製造機台監控看板</h3><p>各廠各線狀態即時掌握</p></span>
           </a></li>
-        </ul>
-
-        <p class="subhead">更早的作品</p>
-        <ul class="work-list">
           <li><a href="work/tristar.html">
             <span class="thumb"><img src="assets/img/home/cover5.webp" width="800" height="584" alt="" loading="lazy"></span>
-            <span><h3>福泰旅遊網站改版</h3><p>整合散落各處的銷售網站</p></span>
-            <span class="meta">福泰旅行社</span>
+            <span><span class="meta">福泰旅行社</span><h3>福泰旅遊網站改版</h3><p>整併對外銷售網站，統一導覽與視覺</p></span>
           </a></li>
           <li><a href="work/travel-admin.html">
             <span class="thumb"><img src="assets/img/home/cover6.webp" width="800" height="584" alt="" loading="lazy"></span>
-            <span><h3>旅行社後台系統</h3><p>訂單與產品，一個系統管到底</p></span>
-            <span class="meta">福泰旅行社</span>
+            <span><span class="meta">福泰旅行社</span><h3>旅行社後台系統</h3><p>訂單管理系統＋產品管理系統</p></span>
           </a></li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="experience" aria-labelledby="exp-title">
+    <section class="section" id="process" aria-labelledby="process-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head" data-ghost="PROCESS">
+          <div><span class="sec-no">02.</span><h2 id="process-title">我如何工作</h2></div>
+          <p>介面設計需分析繁雜資訊，而不僅設計視覺。我精通邏輯梳理、迅速找出重點，延伸融入生活經驗，取得共鳴。</p>
+        </div>
+        <ol class="process">
+          <li class="hot"><span class="no">01</span><h3>暸解與同理</h3><p>暸解實際情況與需求背後動機，確認期待目標。</p></li>
+          <li><span class="no">02</span><h3>發想與策劃</h3><p>腦袋風暴、歸納統整資訊、規劃流程與細節。</p></li>
+          <li><span class="no">03</span><h3>測試與溝通</h3><p>用簡易的原型測試，快速迭代想法。</p></li>
+          <li><span class="no">04</span><h3>設計與執行</h3><p>實作完整的設計內容。</p></li>
+        </ol>
+        <ul class="skills" aria-label="專長">
+          <li>定義問題</li><li>使用流程規劃</li><li>邏輯思考</li><li>設計策略</li><li>交互設計</li><li>設計系統</li><li>視覺設計</li><li>資訊架構</li><li>網頁前端（HTML / CSS）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="exp-title" style="padding-top:0">
       <div class="wrap exp">
-        <div>
-          <h2 id="exp-title" style="font-size:clamp(24px,3vw,32px);color:var(--navy-deep)">經歷</h2>
-          <p style="color:var(--muted);margin-top:12px">從網頁設計走到產品設計，近年專注 B2B SaaS 的 UI / UX。</p>
+        <div class="section-head" data-ghost="CAREER">
+          <div><span class="sec-no">03.</span><h2 id="exp-title">經歷</h2></div>
+          <p>從網頁設計走到產品設計，近年專注 B2B SaaS 的 UI / UX。</p>
         </div>
         <ol>
           <li><time>2023.10 – 2026.01</time><div><strong>UI / UX Designer｜好學教育</strong><span>托育 SaaS「托幼加」Web 與小程序設計，團隊唯一設計師</span></div></li>
@@ -141,8 +169,9 @@
     <section class="section" id="contact" aria-labelledby="contact-title" style="padding-top:0">
       <div class="wrap">
         <div class="contact">
+          <span class="sec-no">04.</span>
           <h2 id="contact-title">一起聊聊？</h2>
-          <p>正在尋找 UI / UX 設計的全職機會，歡迎來信聯絡我。</p>
+          <p>正在尋找 UI / UX 設計的全職或合作機會，歡迎來信聯絡我。</p>
           <div class="contact-links">
             <a class="primary" href="mailto:j78428@gmail.com">j78428@gmail.com</a>
             <a href="https://www.linkedin.com/in/joseph-wu-9026b375/" target="_blank" rel="noopener">LinkedIn</a>
@@ -157,6 +186,7 @@
   <footer class="site-footer">
     <div class="wrap">© 2026 Joseph Wu</div>
   </footer>
+  <a class="to-top" href="#main" aria-label="回到頂端">↑</a>
   <script src="assets/js/site.js" defer></script>
 </body>
 </html>
